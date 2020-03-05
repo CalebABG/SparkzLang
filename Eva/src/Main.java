@@ -1,25 +1,34 @@
 import org.antlr.v4.runtime.ANTLRInputStream;
+import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.CommonTokenStream;
+import org.antlr.v4.runtime.UnbufferedCharStream;
 import org.antlr.v4.runtime.tree.ParseTree;
 import org.antlr.v4.runtime.tree.ParseTreeWalker;
-import java.io.InputStream;
+
 
 public class Main {
-    public static void main(String[] args) throws Exception {
-        ANTLRInputStream input = new ANTLRInputStream(Main.class.getResourceAsStream("./test.eva"));
+    public static void main(String[] args)
+    {
+        try
+        {
+            CharStream input = new UnbufferedCharStream(Main.class.getResourceAsStream("tests/index.eva"));
 
-        EvatLexer lexer = new EvatLexer(input);
+            EvaLexer lexer = new EvaLexer(input);
 
-        CommonTokenStream tokens = new CommonTokenStream(lexer);
+            CommonTokenStream tokens = new CommonTokenStream(lexer);
 
-        EvatParser parser = new EvatParser(tokens);
+            EvaParser parser = new EvaParser(tokens);
 
-        ParseTree tree = parser.eva();
+            ParseTree tree = parser.eva();
 
-        ParseTreeWalker walker = new ParseTreeWalker();
-        walker.walk(new EvatBaseListener(), tree);
+            ParseTreeWalker walker = new ParseTreeWalker();
+            walker.walk(new EvaParserBaseListener(), tree);
 
-        System.out.println(tree.toStringTree(parser));
+            System.out.println(tree.toStringTree(parser));
+        }
+        catch (Exception ex){
+            System.out.println(ex.toString());
+        }
     }
 
 }
