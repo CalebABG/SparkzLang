@@ -26,22 +26,28 @@ elementNormalDeclaration
 
 
 elementCompactDeclaration
-    : tagName tagAttributeDeclaration? (':' string)? ';'
+    : tagName tagAttributeDeclaration? elementCompactStringDeclaration? ';'
     ;
 
 
 elementCompactContentDeclaration
-    : tagName tagAttributeDeclaration? (':' string)? '>' tagContentCompact
+    : tagName tagAttributeDeclaration? elementCompactStringDeclaration? '>' elementCompactContent
     ;
 
 
-tagContentCompact
+elementCompactStringDeclaration
+    : ':' string
+    ;
+
+
+elementCompactContent
     : elementDeclaration
     ;
 
 
 elementBodyContent
-    : (elementDeclaration | elementBodyText)*
+    : elementDeclaration* elementBodyText? elementDeclaration*
+    | elementBodyText
     ;
 
 
@@ -78,8 +84,6 @@ tagAttributeValue
 elementBody
     : '{' elementBodyContent '}'
     ;
-
-
 
 
 tagAttributeName

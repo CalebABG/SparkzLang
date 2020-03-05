@@ -55,11 +55,17 @@ public interface EvaParserVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitElementCompactContentDeclaration(EvaParser.ElementCompactContentDeclarationContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link EvaParser#tagContentCompact}.
+	 * Visit a parse tree produced by {@link EvaParser#elementCompactStringDeclaration}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitTagContentCompact(EvaParser.TagContentCompactContext ctx);
+	T visitElementCompactStringDeclaration(EvaParser.ElementCompactStringDeclarationContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link EvaParser#elementCompactContent}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitElementCompactContent(EvaParser.ElementCompactContentContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link EvaParser#elementBodyContent}.
 	 * @param ctx the parse tree

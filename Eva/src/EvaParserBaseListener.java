@@ -99,13 +99,25 @@ public class EvaParserBaseListener implements EvaParserListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterTagContentCompact(EvaParser.TagContentCompactContext ctx) { }
+	@Override public void enterElementCompactStringDeclaration(EvaParser.ElementCompactStringDeclarationContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitTagContentCompact(EvaParser.TagContentCompactContext ctx) { }
+	@Override public void exitElementCompactStringDeclaration(EvaParser.ElementCompactStringDeclarationContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterElementCompactContent(EvaParser.ElementCompactContentContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitElementCompactContent(EvaParser.ElementCompactContentContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

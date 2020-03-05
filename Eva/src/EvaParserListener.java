@@ -83,15 +83,25 @@ public interface EvaParserListener extends ParseTreeListener {
 	 */
 	void exitElementCompactContentDeclaration(EvaParser.ElementCompactContentDeclarationContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link EvaParser#tagContentCompact}.
+	 * Enter a parse tree produced by {@link EvaParser#elementCompactStringDeclaration}.
 	 * @param ctx the parse tree
 	 */
-	void enterTagContentCompact(EvaParser.TagContentCompactContext ctx);
+	void enterElementCompactStringDeclaration(EvaParser.ElementCompactStringDeclarationContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link EvaParser#tagContentCompact}.
+	 * Exit a parse tree produced by {@link EvaParser#elementCompactStringDeclaration}.
 	 * @param ctx the parse tree
 	 */
-	void exitTagContentCompact(EvaParser.TagContentCompactContext ctx);
+	void exitElementCompactStringDeclaration(EvaParser.ElementCompactStringDeclarationContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link EvaParser#elementCompactContent}.
+	 * @param ctx the parse tree
+	 */
+	void enterElementCompactContent(EvaParser.ElementCompactContentContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link EvaParser#elementCompactContent}.
+	 * @param ctx the parse tree
+	 */
+	void exitElementCompactContent(EvaParser.ElementCompactContentContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link EvaParser#elementBodyContent}.
 	 * @param ctx the parse tree

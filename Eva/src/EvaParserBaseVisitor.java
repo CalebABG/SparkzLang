@@ -65,7 +65,14 @@ public class EvaParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> impleme
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitTagContentCompact(EvaParser.TagContentCompactContext ctx) { return visitChildren(ctx); }
+	@Override public T visitElementCompactStringDeclaration(EvaParser.ElementCompactStringDeclarationContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
+	@Override public T visitElementCompactContent(EvaParser.ElementCompactContentContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *

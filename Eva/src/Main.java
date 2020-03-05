@@ -1,17 +1,13 @@
-import org.antlr.v4.runtime.ANTLRInputStream;
-import org.antlr.v4.runtime.CharStream;
-import org.antlr.v4.runtime.CommonTokenStream;
-import org.antlr.v4.runtime.UnbufferedCharStream;
+import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.tree.ParseTree;
 import org.antlr.v4.runtime.tree.ParseTreeWalker;
-
 
 public class Main {
     public static void main(String[] args)
     {
         try
         {
-            CharStream input = new UnbufferedCharStream(Main.class.getResourceAsStream("tests/index.eva"));
+            CharStream input = CharStreams.fromStream(Main.class.getResourceAsStream("tests/index.eva"));
 
             EvaLexer lexer = new EvaLexer(input);
 
@@ -30,5 +26,4 @@ public class Main {
             System.out.println(ex.toString());
         }
     }
-
 }

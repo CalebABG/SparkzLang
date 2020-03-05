@@ -17,7 +17,7 @@ public class EvaLexer extends Lexer {
 		new PredictionContextCache();
 	public static final int
 		TagAttribute=1, TagNameDeclaration=2, ElementBodyPropertDeclaration=3, 
-		TagNameSpecialDeclaration=4, StringLiteral=5, ATSYM=6, HASHSYM=7, LPAREN=8, 
+		TagNameSpecialDeclaration=4, StringLiteral=5, AT=6, POUND=7, LPAREN=8, 
 		RPAREN=9, LBRACE=10, RBRACE=11, LBRACK=12, RBRACK=13, SEMI=14, COMMA=15, 
 		DOT=16, ASSIGN=17, GT=18, LT=19, BANG=20, TILDE=21, QUESTION=22, COLON=23, 
 		EQUAL=24, LE=25, GE=26, NOTEQUAL=27, AND=28, OR=29, INC=30, DEC=31, ADD=32, 
@@ -34,7 +34,7 @@ public class EvaLexer extends Lexer {
 	private static String[] makeRuleNames() {
 		return new String[] {
 			"TagAttribute", "TagNameDeclaration", "ElementBodyPropertDeclaration", 
-			"TagNameSpecialDeclaration", "StringLiteral", "ATSYM", "HASHSYM", "LPAREN", 
+			"TagNameSpecialDeclaration", "StringLiteral", "AT", "POUND", "LPAREN", 
 			"RPAREN", "LBRACE", "RBRACE", "LBRACK", "RBRACK", "SEMI", "COMMA", "DOT", 
 			"ASSIGN", "GT", "LT", "BANG", "TILDE", "QUESTION", "COLON", "EQUAL", 
 			"LE", "GE", "NOTEQUAL", "AND", "OR", "INC", "DEC", "ADD", "SUB", "MUL", 
@@ -58,7 +58,7 @@ public class EvaLexer extends Lexer {
 	private static String[] makeSymbolicNames() {
 		return new String[] {
 			null, "TagAttribute", "TagNameDeclaration", "ElementBodyPropertDeclaration", 
-			"TagNameSpecialDeclaration", "StringLiteral", "ATSYM", "HASHSYM", "LPAREN", 
+			"TagNameSpecialDeclaration", "StringLiteral", "AT", "POUND", "LPAREN", 
 			"RPAREN", "LBRACE", "RBRACE", "LBRACK", "RBRACK", "SEMI", "COMMA", "DOT", 
 			"ASSIGN", "GT", "LT", "BANG", "TILDE", "QUESTION", "COLON", "EQUAL", 
 			"LE", "GE", "NOTEQUAL", "AND", "OR", "INC", "DEC", "ADD", "SUB", "MUL", 
@@ -148,7 +148,7 @@ public class EvaLexer extends Lexer {
 		"\65\34\67\359\36;\37= ?!A\"C#E$G%I&K\'M(O)Q*S+U\2W\2Y\2[\2]\2_\2a,c-e"+
 		".\3\2\n\6\2\f\f\17\17$$^^\n\2$$))^^ddhhppttvv\t\2C\\c|\u2072\u2191\u2c02"+
 		"\u2ff1\u3003\ud801\uf902\ufdd1\ufdf2\uffff\4\2/\60aa\5\2\u00b9\u00b9\u0302"+
-		"\u0371\u2041\u2042\3\2\62;\5\2\13\f\16\17\"\"\4\2\f\f\17\17\2\u0110\2"+
+		"\u0371\u2041\u2042\3\2\62;\5\2\13\f\17\17\"\"\4\2\f\f\17\17\2\u0110\2"+
 		"\3\3\2\2\2\2\5\3\2\2\2\2\7\3\2\2\2\2\t\3\2\2\2\2\13\3\2\2\2\2\r\3\2\2"+
 		"\2\2\17\3\2\2\2\2\21\3\2\2\2\2\23\3\2\2\2\2\25\3\2\2\2\2\27\3\2\2\2\2"+
 		"\31\3\2\2\2\2\33\3\2\2\2\2\35\3\2\2\2\2\37\3\2\2\2\2!\3\2\2\2\2#\3\2\2"+
