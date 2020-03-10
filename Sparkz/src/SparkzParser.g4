@@ -1,7 +1,7 @@
-parser grammar EvaParser;
+parser grammar SparkzParser;
 
 options {
-    tokenVocab=EvaLexer;
+    tokenVocab=SparkzLexer;
 }
 
 
@@ -11,7 +11,7 @@ Parser rules
 
 
 /* Start grammar rule! */
-eva
+sparkz
     : (elementDeclaration)* EOF
     ;
 

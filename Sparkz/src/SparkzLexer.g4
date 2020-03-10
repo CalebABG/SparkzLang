@@ -1,4 +1,4 @@
-lexer grammar EvaLexer;
+lexer grammar SparkzLexer;
 
 /*
 Lexer rules

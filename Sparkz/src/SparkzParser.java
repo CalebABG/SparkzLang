@@ -1,4 +1,4 @@
-// Generated from C:/Users/flame/Documents/GitHub/Eva-ElegantMarkup/Eva/src\EvaParser.g4 by ANTLR 4.8
+// Generated from C:/Users/flame/Documents/GitHub/Eva-ElegantMarkup/Sparkz/src\SparkzParser.g4 by ANTLR 4.8
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
@@ -9,7 +9,7 @@ import java.util.Iterator;
 import java.util.ArrayList;
 
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
-public class EvaParser extends Parser {
+public class SparkzParser extends Parser {
 	static { RuntimeMetaData.checkVersion("4.8", RuntimeMetaData.VERSION); }
 
 	protected static final DFA[] _decisionToDFA;
@@ -24,7 +24,7 @@ public class EvaParser extends Parser {
 		SUB=33, MUL=34, DIV=35, BITAND=36, BITOR=37, CARET=38, MOD=39, ARROW=40, 
 		COLONCOLON=41, WS=42, COMMENT=43, LINE_COMMENT=44;
 	public static final int
-		RULE_eva = 0, RULE_elementDeclaration = 1, RULE_elementCompactDeclaration = 2, 
+		RULE_sparkz = 0, RULE_elementDeclaration = 1, RULE_elementCompactDeclaration = 2, 
 		RULE_elementCompactContentDeclaration = 3, RULE_elementCompactStringDeclaration = 4, 
 		RULE_elementCompactContent = 5, RULE_elementNormalDeclaration = 6, RULE_elementBody = 7, 
 		RULE_elementBodyContent = 8, RULE_elementBodyText = 9, RULE_elementBodyProperty = 10, 
@@ -33,7 +33,7 @@ public class EvaParser extends Parser {
 		RULE_elementName = 16, RULE_string = 17;
 	private static String[] makeRuleNames() {
 		return new String[] {
-			"eva", "elementDeclaration", "elementCompactDeclaration", "elementCompactContentDeclaration", 
+			"sparkz", "elementDeclaration", "elementCompactDeclaration", "elementCompactContentDeclaration", 
 			"elementCompactStringDeclaration", "elementCompactContent", "elementNormalDeclaration", 
 			"elementBody", "elementBodyContent", "elementBodyText", "elementBodyProperty", 
 			"elementAttributeListDeclaration", "elementAttributes", "elementAttribute", 
@@ -98,7 +98,7 @@ public class EvaParser extends Parser {
 	}
 
 	@Override
-	public String getGrammarFileName() { return "EvaParser.g4"; }
+	public String getGrammarFileName() { return "SparkzParser.g4"; }
 
 	@Override
 	public String[] getRuleNames() { return ruleNames; }
@@ -109,41 +109,41 @@ public class EvaParser extends Parser {
 	@Override
 	public ATN getATN() { return _ATN; }
 
-	public EvaParser(TokenStream input) {
+	public SparkzParser(TokenStream input) {
 		super(input);
 		_interp = new ParserATNSimulator(this,_ATN,_decisionToDFA,_sharedContextCache);
 	}
 
-	public static class EvaContext extends ParserRuleContext {
-		public TerminalNode EOF() { return getToken(EvaParser.EOF, 0); }
+	public static class SparkzContext extends ParserRuleContext {
+		public TerminalNode EOF() { return getToken(SparkzParser.EOF, 0); }
 		public List<ElementDeclarationContext> elementDeclaration() {
 			return getRuleContexts(ElementDeclarationContext.class);
 		}
 		public ElementDeclarationContext elementDeclaration(int i) {
 			return getRuleContext(ElementDeclarationContext.class,i);
 		}
-		public EvaContext(ParserRuleContext parent, int invokingState) {
+		public SparkzContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_eva; }
+		@Override public int getRuleIndex() { return RULE_sparkz; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof EvaParserListener ) ((EvaParserListener)listener).enterEva(this);
+			if ( listener instanceof SparkzParserListener ) ((SparkzParserListener)listener).enterSparkz(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof EvaParserListener ) ((EvaParserListener)listener).exitEva(this);
+			if ( listener instanceof SparkzParserListener ) ((SparkzParserListener)listener).exitSparkz(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof EvaParserVisitor ) return ((EvaParserVisitor<? extends T>)visitor).visitEva(this);
+			if ( visitor instanceof SparkzParserVisitor ) return ((SparkzParserVisitor<? extends T>)visitor).visitSparkz(this);
 			else return visitor.visitChildren(this);
 		}
 	}
 
-	public final EvaContext eva() throws RecognitionException {
-		EvaContext _localctx = new EvaContext(_ctx, getState());
-		enterRule(_localctx, 0, RULE_eva);
+	public final SparkzContext sparkz() throws RecognitionException {
+		SparkzContext _localctx = new SparkzContext(_ctx, getState());
+		enterRule(_localctx, 0, RULE_sparkz);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
@@ -195,15 +195,15 @@ public class EvaParser extends Parser {
 		public CompactElementContext(ElementDeclarationContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof EvaParserListener ) ((EvaParserListener)listener).enterCompactElement(this);
+			if ( listener instanceof SparkzParserListener ) ((SparkzParserListener)listener).enterCompactElement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof EvaParserListener ) ((EvaParserListener)listener).exitCompactElement(this);
+			if ( listener instanceof SparkzParserListener ) ((SparkzParserListener)listener).exitCompactElement(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof EvaParserVisitor ) return ((EvaParserVisitor<? extends T>)visitor).visitCompactElement(this);
+			if ( visitor instanceof SparkzParserVisitor ) return ((SparkzParserVisitor<? extends T>)visitor).visitCompactElement(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -214,15 +214,15 @@ public class EvaParser extends Parser {
 		public NormalElementContext(ElementDeclarationContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof EvaParserListener ) ((EvaParserListener)listener).enterNormalElement(this);
+			if ( listener instanceof SparkzParserListener ) ((SparkzParserListener)listener).enterNormalElement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof EvaParserListener ) ((EvaParserListener)listener).exitNormalElement(this);
+			if ( listener instanceof SparkzParserListener ) ((SparkzParserListener)listener).exitNormalElement(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof EvaParserVisitor ) return ((EvaParserVisitor<? extends T>)visitor).visitNormalElement(this);
+			if ( visitor instanceof SparkzParserVisitor ) return ((SparkzParserVisitor<? extends T>)visitor).visitNormalElement(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -233,15 +233,15 @@ public class EvaParser extends Parser {
 		public CompactExtElementContext(ElementDeclarationContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof EvaParserListener ) ((EvaParserListener)listener).enterCompactExtElement(this);
+			if ( listener instanceof SparkzParserListener ) ((SparkzParserListener)listener).enterCompactExtElement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof EvaParserListener ) ((EvaParserListener)listener).exitCompactExtElement(this);
+			if ( listener instanceof SparkzParserListener ) ((SparkzParserListener)listener).exitCompactExtElement(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof EvaParserVisitor ) return ((EvaParserVisitor<? extends T>)visitor).visitCompactExtElement(this);
+			if ( visitor instanceof SparkzParserVisitor ) return ((SparkzParserVisitor<? extends T>)visitor).visitCompactExtElement(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -294,7 +294,7 @@ public class EvaParser extends Parser {
 		public ElementNameContext elementName() {
 			return getRuleContext(ElementNameContext.class,0);
 		}
-		public TerminalNode SEMI() { return getToken(EvaParser.SEMI, 0); }
+		public TerminalNode SEMI() { return getToken(SparkzParser.SEMI, 0); }
 		public ElementAttributeListDeclarationContext elementAttributeListDeclaration() {
 			return getRuleContext(ElementAttributeListDeclarationContext.class,0);
 		}
@@ -307,15 +307,15 @@ public class EvaParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_elementCompactDeclaration; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof EvaParserListener ) ((EvaParserListener)listener).enterElementCompactDeclaration(this);
+			if ( listener instanceof SparkzParserListener ) ((SparkzParserListener)listener).enterElementCompactDeclaration(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof EvaParserListener ) ((EvaParserListener)listener).exitElementCompactDeclaration(this);
+			if ( listener instanceof SparkzParserListener ) ((SparkzParserListener)listener).exitElementCompactDeclaration(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof EvaParserVisitor ) return ((EvaParserVisitor<? extends T>)visitor).visitElementCompactDeclaration(this);
+			if ( visitor instanceof SparkzParserVisitor ) return ((SparkzParserVisitor<? extends T>)visitor).visitElementCompactDeclaration(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -368,7 +368,7 @@ public class EvaParser extends Parser {
 		public ElementNameContext elementName() {
 			return getRuleContext(ElementNameContext.class,0);
 		}
-		public TerminalNode GT() { return getToken(EvaParser.GT, 0); }
+		public TerminalNode GT() { return getToken(SparkzParser.GT, 0); }
 		public ElementCompactContentContext elementCompactContent() {
 			return getRuleContext(ElementCompactContentContext.class,0);
 		}
@@ -384,15 +384,15 @@ public class EvaParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_elementCompactContentDeclaration; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof EvaParserListener ) ((EvaParserListener)listener).enterElementCompactContentDeclaration(this);
+			if ( listener instanceof SparkzParserListener ) ((SparkzParserListener)listener).enterElementCompactContentDeclaration(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof EvaParserListener ) ((EvaParserListener)listener).exitElementCompactContentDeclaration(this);
+			if ( listener instanceof SparkzParserListener ) ((SparkzParserListener)listener).exitElementCompactContentDeclaration(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof EvaParserVisitor ) return ((EvaParserVisitor<? extends T>)visitor).visitElementCompactContentDeclaration(this);
+			if ( visitor instanceof SparkzParserVisitor ) return ((SparkzParserVisitor<? extends T>)visitor).visitElementCompactContentDeclaration(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -444,7 +444,7 @@ public class EvaParser extends Parser {
 	}
 
 	public static class ElementCompactStringDeclarationContext extends ParserRuleContext {
-		public TerminalNode COLON() { return getToken(EvaParser.COLON, 0); }
+		public TerminalNode COLON() { return getToken(SparkzParser.COLON, 0); }
 		public StringContext string() {
 			return getRuleContext(StringContext.class,0);
 		}
@@ -454,15 +454,15 @@ public class EvaParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_elementCompactStringDeclaration; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof EvaParserListener ) ((EvaParserListener)listener).enterElementCompactStringDeclaration(this);
+			if ( listener instanceof SparkzParserListener ) ((SparkzParserListener)listener).enterElementCompactStringDeclaration(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof EvaParserListener ) ((EvaParserListener)listener).exitElementCompactStringDeclaration(this);
+			if ( listener instanceof SparkzParserListener ) ((SparkzParserListener)listener).exitElementCompactStringDeclaration(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof EvaParserVisitor ) return ((EvaParserVisitor<? extends T>)visitor).visitElementCompactStringDeclaration(this);
+			if ( visitor instanceof SparkzParserVisitor ) return ((SparkzParserVisitor<? extends T>)visitor).visitElementCompactStringDeclaration(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -500,15 +500,15 @@ public class EvaParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_elementCompactContent; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof EvaParserListener ) ((EvaParserListener)listener).enterElementCompactContent(this);
+			if ( listener instanceof SparkzParserListener ) ((SparkzParserListener)listener).enterElementCompactContent(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof EvaParserListener ) ((EvaParserListener)listener).exitElementCompactContent(this);
+			if ( listener instanceof SparkzParserListener ) ((SparkzParserListener)listener).exitElementCompactContent(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof EvaParserVisitor ) return ((EvaParserVisitor<? extends T>)visitor).visitElementCompactContent(this);
+			if ( visitor instanceof SparkzParserVisitor ) return ((SparkzParserVisitor<? extends T>)visitor).visitElementCompactContent(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -550,15 +550,15 @@ public class EvaParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_elementNormalDeclaration; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof EvaParserListener ) ((EvaParserListener)listener).enterElementNormalDeclaration(this);
+			if ( listener instanceof SparkzParserListener ) ((SparkzParserListener)listener).enterElementNormalDeclaration(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof EvaParserListener ) ((EvaParserListener)listener).exitElementNormalDeclaration(this);
+			if ( listener instanceof SparkzParserListener ) ((SparkzParserListener)listener).exitElementNormalDeclaration(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof EvaParserVisitor ) return ((EvaParserVisitor<? extends T>)visitor).visitElementNormalDeclaration(this);
+			if ( visitor instanceof SparkzParserVisitor ) return ((SparkzParserVisitor<? extends T>)visitor).visitElementNormalDeclaration(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -598,26 +598,26 @@ public class EvaParser extends Parser {
 	}
 
 	public static class ElementBodyContext extends ParserRuleContext {
-		public TerminalNode LBRACE() { return getToken(EvaParser.LBRACE, 0); }
+		public TerminalNode LBRACE() { return getToken(SparkzParser.LBRACE, 0); }
 		public ElementBodyContentContext elementBodyContent() {
 			return getRuleContext(ElementBodyContentContext.class,0);
 		}
-		public TerminalNode RBRACE() { return getToken(EvaParser.RBRACE, 0); }
+		public TerminalNode RBRACE() { return getToken(SparkzParser.RBRACE, 0); }
 		public ElementBodyContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_elementBody; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof EvaParserListener ) ((EvaParserListener)listener).enterElementBody(this);
+			if ( listener instanceof SparkzParserListener ) ((SparkzParserListener)listener).enterElementBody(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof EvaParserListener ) ((EvaParserListener)listener).exitElementBody(this);
+			if ( listener instanceof SparkzParserListener ) ((SparkzParserListener)listener).exitElementBody(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof EvaParserVisitor ) return ((EvaParserVisitor<? extends T>)visitor).visitElementBody(this);
+			if ( visitor instanceof SparkzParserVisitor ) return ((SparkzParserVisitor<? extends T>)visitor).visitElementBody(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -663,15 +663,15 @@ public class EvaParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_elementBodyContent; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof EvaParserListener ) ((EvaParserListener)listener).enterElementBodyContent(this);
+			if ( listener instanceof SparkzParserListener ) ((SparkzParserListener)listener).enterElementBodyContent(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof EvaParserListener ) ((EvaParserListener)listener).exitElementBodyContent(this);
+			if ( listener instanceof SparkzParserListener ) ((SparkzParserListener)listener).exitElementBodyContent(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof EvaParserVisitor ) return ((EvaParserVisitor<? extends T>)visitor).visitElementBodyContent(this);
+			if ( visitor instanceof SparkzParserVisitor ) return ((SparkzParserVisitor<? extends T>)visitor).visitElementBodyContent(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -754,7 +754,7 @@ public class EvaParser extends Parser {
 		public ElementBodyPropertyContext elementBodyProperty() {
 			return getRuleContext(ElementBodyPropertyContext.class,0);
 		}
-		public TerminalNode ASSIGN() { return getToken(EvaParser.ASSIGN, 0); }
+		public TerminalNode ASSIGN() { return getToken(SparkzParser.ASSIGN, 0); }
 		public StringContext string() {
 			return getRuleContext(StringContext.class,0);
 		}
@@ -764,15 +764,15 @@ public class EvaParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_elementBodyText; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof EvaParserListener ) ((EvaParserListener)listener).enterElementBodyText(this);
+			if ( listener instanceof SparkzParserListener ) ((SparkzParserListener)listener).enterElementBodyText(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof EvaParserListener ) ((EvaParserListener)listener).exitElementBodyText(this);
+			if ( listener instanceof SparkzParserListener ) ((SparkzParserListener)listener).exitElementBodyText(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof EvaParserVisitor ) return ((EvaParserVisitor<? extends T>)visitor).visitElementBodyText(this);
+			if ( visitor instanceof SparkzParserVisitor ) return ((SparkzParserVisitor<? extends T>)visitor).visitElementBodyText(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -803,22 +803,22 @@ public class EvaParser extends Parser {
 	}
 
 	public static class ElementBodyPropertyContext extends ParserRuleContext {
-		public TerminalNode ElementBodyPropertDeclaration() { return getToken(EvaParser.ElementBodyPropertDeclaration, 0); }
+		public TerminalNode ElementBodyPropertDeclaration() { return getToken(SparkzParser.ElementBodyPropertDeclaration, 0); }
 		public ElementBodyPropertyContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_elementBodyProperty; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof EvaParserListener ) ((EvaParserListener)listener).enterElementBodyProperty(this);
+			if ( listener instanceof SparkzParserListener ) ((SparkzParserListener)listener).enterElementBodyProperty(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof EvaParserListener ) ((EvaParserListener)listener).exitElementBodyProperty(this);
+			if ( listener instanceof SparkzParserListener ) ((SparkzParserListener)listener).exitElementBodyProperty(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof EvaParserVisitor ) return ((EvaParserVisitor<? extends T>)visitor).visitElementBodyProperty(this);
+			if ( visitor instanceof SparkzParserVisitor ) return ((SparkzParserVisitor<? extends T>)visitor).visitElementBodyProperty(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -845,26 +845,26 @@ public class EvaParser extends Parser {
 	}
 
 	public static class ElementAttributeListDeclarationContext extends ParserRuleContext {
-		public TerminalNode LPAREN() { return getToken(EvaParser.LPAREN, 0); }
+		public TerminalNode LPAREN() { return getToken(SparkzParser.LPAREN, 0); }
 		public ElementAttributesContext elementAttributes() {
 			return getRuleContext(ElementAttributesContext.class,0);
 		}
-		public TerminalNode RPAREN() { return getToken(EvaParser.RPAREN, 0); }
+		public TerminalNode RPAREN() { return getToken(SparkzParser.RPAREN, 0); }
 		public ElementAttributeListDeclarationContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_elementAttributeListDeclaration; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof EvaParserListener ) ((EvaParserListener)listener).enterElementAttributeListDeclaration(this);
+			if ( listener instanceof SparkzParserListener ) ((SparkzParserListener)listener).enterElementAttributeListDeclaration(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof EvaParserListener ) ((EvaParserListener)listener).exitElementAttributeListDeclaration(this);
+			if ( listener instanceof SparkzParserListener ) ((SparkzParserListener)listener).exitElementAttributeListDeclaration(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof EvaParserVisitor ) return ((EvaParserVisitor<? extends T>)visitor).visitElementAttributeListDeclaration(this);
+			if ( visitor instanceof SparkzParserVisitor ) return ((SparkzParserVisitor<? extends T>)visitor).visitElementAttributeListDeclaration(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -901,9 +901,9 @@ public class EvaParser extends Parser {
 		public ElementAttributeContext elementAttribute(int i) {
 			return getRuleContext(ElementAttributeContext.class,i);
 		}
-		public List<TerminalNode> COMMA() { return getTokens(EvaParser.COMMA); }
+		public List<TerminalNode> COMMA() { return getTokens(SparkzParser.COMMA); }
 		public TerminalNode COMMA(int i) {
-			return getToken(EvaParser.COMMA, i);
+			return getToken(SparkzParser.COMMA, i);
 		}
 		public ElementAttributesContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -911,15 +911,15 @@ public class EvaParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_elementAttributes; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof EvaParserListener ) ((EvaParserListener)listener).enterElementAttributes(this);
+			if ( listener instanceof SparkzParserListener ) ((SparkzParserListener)listener).enterElementAttributes(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof EvaParserListener ) ((EvaParserListener)listener).exitElementAttributes(this);
+			if ( listener instanceof SparkzParserListener ) ((SparkzParserListener)listener).exitElementAttributes(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof EvaParserVisitor ) return ((EvaParserVisitor<? extends T>)visitor).visitElementAttributes(this);
+			if ( visitor instanceof SparkzParserVisitor ) return ((SparkzParserVisitor<? extends T>)visitor).visitElementAttributes(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -966,7 +966,7 @@ public class EvaParser extends Parser {
 		public ElementAttributeNameContext elementAttributeName() {
 			return getRuleContext(ElementAttributeNameContext.class,0);
 		}
-		public TerminalNode ASSIGN() { return getToken(EvaParser.ASSIGN, 0); }
+		public TerminalNode ASSIGN() { return getToken(SparkzParser.ASSIGN, 0); }
 		public ElementAttributeValueContext elementAttributeValue() {
 			return getRuleContext(ElementAttributeValueContext.class,0);
 		}
@@ -976,15 +976,15 @@ public class EvaParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_elementAttribute; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof EvaParserListener ) ((EvaParserListener)listener).enterElementAttribute(this);
+			if ( listener instanceof SparkzParserListener ) ((SparkzParserListener)listener).enterElementAttribute(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof EvaParserListener ) ((EvaParserListener)listener).exitElementAttribute(this);
+			if ( listener instanceof SparkzParserListener ) ((SparkzParserListener)listener).exitElementAttribute(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof EvaParserVisitor ) return ((EvaParserVisitor<? extends T>)visitor).visitElementAttribute(this);
+			if ( visitor instanceof SparkzParserVisitor ) return ((SparkzParserVisitor<? extends T>)visitor).visitElementAttribute(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1024,22 +1024,22 @@ public class EvaParser extends Parser {
 	}
 
 	public static class ElementAttributeNameContext extends ParserRuleContext {
-		public TerminalNode TagAttribute() { return getToken(EvaParser.TagAttribute, 0); }
+		public TerminalNode TagAttribute() { return getToken(SparkzParser.TagAttribute, 0); }
 		public ElementAttributeNameContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_elementAttributeName; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof EvaParserListener ) ((EvaParserListener)listener).enterElementAttributeName(this);
+			if ( listener instanceof SparkzParserListener ) ((SparkzParserListener)listener).enterElementAttributeName(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof EvaParserListener ) ((EvaParserListener)listener).exitElementAttributeName(this);
+			if ( listener instanceof SparkzParserListener ) ((SparkzParserListener)listener).exitElementAttributeName(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof EvaParserVisitor ) return ((EvaParserVisitor<? extends T>)visitor).visitElementAttributeName(this);
+			if ( visitor instanceof SparkzParserVisitor ) return ((SparkzParserVisitor<? extends T>)visitor).visitElementAttributeName(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1066,22 +1066,22 @@ public class EvaParser extends Parser {
 	}
 
 	public static class ElementAttributeValueContext extends ParserRuleContext {
-		public TerminalNode StringLiteral() { return getToken(EvaParser.StringLiteral, 0); }
+		public TerminalNode StringLiteral() { return getToken(SparkzParser.StringLiteral, 0); }
 		public ElementAttributeValueContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_elementAttributeValue; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof EvaParserListener ) ((EvaParserListener)listener).enterElementAttributeValue(this);
+			if ( listener instanceof SparkzParserListener ) ((SparkzParserListener)listener).enterElementAttributeValue(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof EvaParserListener ) ((EvaParserListener)listener).exitElementAttributeValue(this);
+			if ( listener instanceof SparkzParserListener ) ((SparkzParserListener)listener).exitElementAttributeValue(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof EvaParserVisitor ) return ((EvaParserVisitor<? extends T>)visitor).visitElementAttributeValue(this);
+			if ( visitor instanceof SparkzParserVisitor ) return ((SparkzParserVisitor<? extends T>)visitor).visitElementAttributeValue(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1108,23 +1108,23 @@ public class EvaParser extends Parser {
 	}
 
 	public static class ElementNameContext extends ParserRuleContext {
-		public TerminalNode TagNameDeclaration() { return getToken(EvaParser.TagNameDeclaration, 0); }
-		public TerminalNode TagNameSpecialDeclaration() { return getToken(EvaParser.TagNameSpecialDeclaration, 0); }
+		public TerminalNode TagNameDeclaration() { return getToken(SparkzParser.TagNameDeclaration, 0); }
+		public TerminalNode TagNameSpecialDeclaration() { return getToken(SparkzParser.TagNameSpecialDeclaration, 0); }
 		public ElementNameContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_elementName; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof EvaParserListener ) ((EvaParserListener)listener).enterElementName(this);
+			if ( listener instanceof SparkzParserListener ) ((SparkzParserListener)listener).enterElementName(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof EvaParserListener ) ((EvaParserListener)listener).exitElementName(this);
+			if ( listener instanceof SparkzParserListener ) ((SparkzParserListener)listener).exitElementName(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof EvaParserVisitor ) return ((EvaParserVisitor<? extends T>)visitor).visitElementName(this);
+			if ( visitor instanceof SparkzParserVisitor ) return ((SparkzParserVisitor<? extends T>)visitor).visitElementName(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1160,22 +1160,22 @@ public class EvaParser extends Parser {
 	}
 
 	public static class StringContext extends ParserRuleContext {
-		public TerminalNode StringLiteral() { return getToken(EvaParser.StringLiteral, 0); }
+		public TerminalNode StringLiteral() { return getToken(SparkzParser.StringLiteral, 0); }
 		public StringContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_string; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof EvaParserListener ) ((EvaParserListener)listener).enterString(this);
+			if ( listener instanceof SparkzParserListener ) ((SparkzParserListener)listener).enterString(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof EvaParserListener ) ((EvaParserListener)listener).exitString(this);
+			if ( listener instanceof SparkzParserListener ) ((SparkzParserListener)listener).exitString(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof EvaParserVisitor ) return ((EvaParserVisitor<? extends T>)visitor).visitString(this);
+			if ( visitor instanceof SparkzParserVisitor ) return ((SparkzParserVisitor<? extends T>)visitor).visitString(this);
 			else return visitor.visitChildren(this);
 		}
 	}

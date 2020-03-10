@@ -1,255 +1,255 @@
-// Generated from C:/Users/flame/Documents/GitHub/Eva-ElegantMarkup/Eva/src\EvaParser.g4 by ANTLR 4.8
+// Generated from C:/Users/flame/Documents/GitHub/Eva-ElegantMarkup/Sparkz/src\SparkzParser.g4 by ANTLR 4.8
 
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.tree.ErrorNode;
 import org.antlr.v4.runtime.tree.TerminalNode;
 
 /**
- * This class provides an empty implementation of {@link EvaParserListener},
+ * This class provides an empty implementation of {@link SparkzParserListener},
  * which can be extended to create a listener which only needs to handle a subset
  * of the available methods.
  */
-public class EvaParserBaseListener implements EvaParserListener {
+public class SparkzParserBaseListener implements SparkzParserListener {
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterEva(EvaParser.EvaContext ctx) { }
+	@Override public void enterSparkz(SparkzParser.SparkzContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitEva(EvaParser.EvaContext ctx) { }
+	@Override public void exitSparkz(SparkzParser.SparkzContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterNormalElement(EvaParser.NormalElementContext ctx) { }
+	@Override public void enterNormalElement(SparkzParser.NormalElementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitNormalElement(EvaParser.NormalElementContext ctx) { }
+	@Override public void exitNormalElement(SparkzParser.NormalElementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterCompactElement(EvaParser.CompactElementContext ctx) { }
+	@Override public void enterCompactElement(SparkzParser.CompactElementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitCompactElement(EvaParser.CompactElementContext ctx) { }
+	@Override public void exitCompactElement(SparkzParser.CompactElementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterCompactExtElement(EvaParser.CompactExtElementContext ctx) { }
+	@Override public void enterCompactExtElement(SparkzParser.CompactExtElementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitCompactExtElement(EvaParser.CompactExtElementContext ctx) { }
+	@Override public void exitCompactExtElement(SparkzParser.CompactExtElementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterElementCompactDeclaration(EvaParser.ElementCompactDeclarationContext ctx) { }
+	@Override public void enterElementCompactDeclaration(SparkzParser.ElementCompactDeclarationContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitElementCompactDeclaration(EvaParser.ElementCompactDeclarationContext ctx) { }
+	@Override public void exitElementCompactDeclaration(SparkzParser.ElementCompactDeclarationContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterElementCompactContentDeclaration(EvaParser.ElementCompactContentDeclarationContext ctx) { }
+	@Override public void enterElementCompactContentDeclaration(SparkzParser.ElementCompactContentDeclarationContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitElementCompactContentDeclaration(EvaParser.ElementCompactContentDeclarationContext ctx) { }
+	@Override public void exitElementCompactContentDeclaration(SparkzParser.ElementCompactContentDeclarationContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterElementCompactStringDeclaration(EvaParser.ElementCompactStringDeclarationContext ctx) { }
+	@Override public void enterElementCompactStringDeclaration(SparkzParser.ElementCompactStringDeclarationContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitElementCompactStringDeclaration(EvaParser.ElementCompactStringDeclarationContext ctx) { }
+	@Override public void exitElementCompactStringDeclaration(SparkzParser.ElementCompactStringDeclarationContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterElementCompactContent(EvaParser.ElementCompactContentContext ctx) { }
+	@Override public void enterElementCompactContent(SparkzParser.ElementCompactContentContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitElementCompactContent(EvaParser.ElementCompactContentContext ctx) { }
+	@Override public void exitElementCompactContent(SparkzParser.ElementCompactContentContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterElementNormalDeclaration(EvaParser.ElementNormalDeclarationContext ctx) { }
+	@Override public void enterElementNormalDeclaration(SparkzParser.ElementNormalDeclarationContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitElementNormalDeclaration(EvaParser.ElementNormalDeclarationContext ctx) { }
+	@Override public void exitElementNormalDeclaration(SparkzParser.ElementNormalDeclarationContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterElementBody(EvaParser.ElementBodyContext ctx) { }
+	@Override public void enterElementBody(SparkzParser.ElementBodyContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitElementBody(EvaParser.ElementBodyContext ctx) { }
+	@Override public void exitElementBody(SparkzParser.ElementBodyContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterElementBodyContent(EvaParser.ElementBodyContentContext ctx) { }
+	@Override public void enterElementBodyContent(SparkzParser.ElementBodyContentContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitElementBodyContent(EvaParser.ElementBodyContentContext ctx) { }
+	@Override public void exitElementBodyContent(SparkzParser.ElementBodyContentContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterElementBodyText(EvaParser.ElementBodyTextContext ctx) { }
+	@Override public void enterElementBodyText(SparkzParser.ElementBodyTextContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitElementBodyText(EvaParser.ElementBodyTextContext ctx) { }
+	@Override public void exitElementBodyText(SparkzParser.ElementBodyTextContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterElementBodyProperty(EvaParser.ElementBodyPropertyContext ctx) { }
+	@Override public void enterElementBodyProperty(SparkzParser.ElementBodyPropertyContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitElementBodyProperty(EvaParser.ElementBodyPropertyContext ctx) { }
+	@Override public void exitElementBodyProperty(SparkzParser.ElementBodyPropertyContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterElementAttributeListDeclaration(EvaParser.ElementAttributeListDeclarationContext ctx) { }
+	@Override public void enterElementAttributeListDeclaration(SparkzParser.ElementAttributeListDeclarationContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitElementAttributeListDeclaration(EvaParser.ElementAttributeListDeclarationContext ctx) { }
+	@Override public void exitElementAttributeListDeclaration(SparkzParser.ElementAttributeListDeclarationContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterElementAttributes(EvaParser.ElementAttributesContext ctx) { }
+	@Override public void enterElementAttributes(SparkzParser.ElementAttributesContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitElementAttributes(EvaParser.ElementAttributesContext ctx) { }
+	@Override public void exitElementAttributes(SparkzParser.ElementAttributesContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterElementAttribute(EvaParser.ElementAttributeContext ctx) { }
+	@Override public void enterElementAttribute(SparkzParser.ElementAttributeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitElementAttribute(EvaParser.ElementAttributeContext ctx) { }
+	@Override public void exitElementAttribute(SparkzParser.ElementAttributeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterElementAttributeName(EvaParser.ElementAttributeNameContext ctx) { }
+	@Override public void enterElementAttributeName(SparkzParser.ElementAttributeNameContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitElementAttributeName(EvaParser.ElementAttributeNameContext ctx) { }
+	@Override public void exitElementAttributeName(SparkzParser.ElementAttributeNameContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterElementAttributeValue(EvaParser.ElementAttributeValueContext ctx) { }
+	@Override public void enterElementAttributeValue(SparkzParser.ElementAttributeValueContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitElementAttributeValue(EvaParser.ElementAttributeValueContext ctx) { }
+	@Override public void exitElementAttributeValue(SparkzParser.ElementAttributeValueContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterElementName(EvaParser.ElementNameContext ctx) { }
+	@Override public void enterElementName(SparkzParser.ElementNameContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitElementName(EvaParser.ElementNameContext ctx) { }
+	@Override public void exitElementName(SparkzParser.ElementNameContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterString(EvaParser.StringContext ctx) { }
+	@Override public void enterString(SparkzParser.StringContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitString(EvaParser.StringContext ctx) { }
+	@Override public void exitString(SparkzParser.StringContext ctx) { }
 
 	/**
 	 * {@inheritDoc}
