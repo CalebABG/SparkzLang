@@ -16,32 +16,26 @@ public interface EvaParserVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitEva(EvaParser.EvaContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code normalElementDeclaration}
+	 * Visit a parse tree produced by the {@code normalElement}
 	 * labeled alternative in {@link EvaParser#elementDeclaration}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitNormalElementDeclaration(EvaParser.NormalElementDeclarationContext ctx);
+	T visitNormalElement(EvaParser.NormalElementContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code compactElementDeclaration}
+	 * Visit a parse tree produced by the {@code compactElement}
 	 * labeled alternative in {@link EvaParser#elementDeclaration}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitCompactElementDeclaration(EvaParser.CompactElementDeclarationContext ctx);
+	T visitCompactElement(EvaParser.CompactElementContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code compactElementContentDeclaration}
+	 * Visit a parse tree produced by the {@code compactExtElement}
 	 * labeled alternative in {@link EvaParser#elementDeclaration}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitCompactElementContentDeclaration(EvaParser.CompactElementContentDeclarationContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link EvaParser#elementNormalDeclaration}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitElementNormalDeclaration(EvaParser.ElementNormalDeclarationContext ctx);
+	T visitCompactExtElement(EvaParser.CompactExtElementContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link EvaParser#elementCompactDeclaration}.
 	 * @param ctx the parse tree
@@ -67,6 +61,18 @@ public interface EvaParserVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitElementCompactContent(EvaParser.ElementCompactContentContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link EvaParser#elementNormalDeclaration}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitElementNormalDeclaration(EvaParser.ElementNormalDeclarationContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link EvaParser#elementBody}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitElementBody(EvaParser.ElementBodyContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link EvaParser#elementBodyContent}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
@@ -84,12 +90,6 @@ public interface EvaParserVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitElementBodyProperty(EvaParser.ElementBodyPropertyContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link EvaParser#elementBody}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitElementBody(EvaParser.ElementBodyContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link EvaParser#elementAttributeListDeclaration}.
 	 * @param ctx the parse tree

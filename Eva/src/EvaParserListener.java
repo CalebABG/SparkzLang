@@ -17,51 +17,41 @@ public interface EvaParserListener extends ParseTreeListener {
 	 */
 	void exitEva(EvaParser.EvaContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code normalElementDeclaration}
+	 * Enter a parse tree produced by the {@code normalElement}
 	 * labeled alternative in {@link EvaParser#elementDeclaration}.
 	 * @param ctx the parse tree
 	 */
-	void enterNormalElementDeclaration(EvaParser.NormalElementDeclarationContext ctx);
+	void enterNormalElement(EvaParser.NormalElementContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code normalElementDeclaration}
+	 * Exit a parse tree produced by the {@code normalElement}
 	 * labeled alternative in {@link EvaParser#elementDeclaration}.
 	 * @param ctx the parse tree
 	 */
-	void exitNormalElementDeclaration(EvaParser.NormalElementDeclarationContext ctx);
+	void exitNormalElement(EvaParser.NormalElementContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code compactElementDeclaration}
+	 * Enter a parse tree produced by the {@code compactElement}
 	 * labeled alternative in {@link EvaParser#elementDeclaration}.
 	 * @param ctx the parse tree
 	 */
-	void enterCompactElementDeclaration(EvaParser.CompactElementDeclarationContext ctx);
+	void enterCompactElement(EvaParser.CompactElementContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code compactElementDeclaration}
+	 * Exit a parse tree produced by the {@code compactElement}
 	 * labeled alternative in {@link EvaParser#elementDeclaration}.
 	 * @param ctx the parse tree
 	 */
-	void exitCompactElementDeclaration(EvaParser.CompactElementDeclarationContext ctx);
+	void exitCompactElement(EvaParser.CompactElementContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code compactElementContentDeclaration}
+	 * Enter a parse tree produced by the {@code compactExtElement}
 	 * labeled alternative in {@link EvaParser#elementDeclaration}.
 	 * @param ctx the parse tree
 	 */
-	void enterCompactElementContentDeclaration(EvaParser.CompactElementContentDeclarationContext ctx);
+	void enterCompactExtElement(EvaParser.CompactExtElementContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code compactElementContentDeclaration}
+	 * Exit a parse tree produced by the {@code compactExtElement}
 	 * labeled alternative in {@link EvaParser#elementDeclaration}.
 	 * @param ctx the parse tree
 	 */
-	void exitCompactElementContentDeclaration(EvaParser.CompactElementContentDeclarationContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link EvaParser#elementNormalDeclaration}.
-	 * @param ctx the parse tree
-	 */
-	void enterElementNormalDeclaration(EvaParser.ElementNormalDeclarationContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link EvaParser#elementNormalDeclaration}.
-	 * @param ctx the parse tree
-	 */
-	void exitElementNormalDeclaration(EvaParser.ElementNormalDeclarationContext ctx);
+	void exitCompactExtElement(EvaParser.CompactExtElementContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link EvaParser#elementCompactDeclaration}.
 	 * @param ctx the parse tree
@@ -103,6 +93,26 @@ public interface EvaParserListener extends ParseTreeListener {
 	 */
 	void exitElementCompactContent(EvaParser.ElementCompactContentContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link EvaParser#elementNormalDeclaration}.
+	 * @param ctx the parse tree
+	 */
+	void enterElementNormalDeclaration(EvaParser.ElementNormalDeclarationContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link EvaParser#elementNormalDeclaration}.
+	 * @param ctx the parse tree
+	 */
+	void exitElementNormalDeclaration(EvaParser.ElementNormalDeclarationContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link EvaParser#elementBody}.
+	 * @param ctx the parse tree
+	 */
+	void enterElementBody(EvaParser.ElementBodyContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link EvaParser#elementBody}.
+	 * @param ctx the parse tree
+	 */
+	void exitElementBody(EvaParser.ElementBodyContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link EvaParser#elementBodyContent}.
 	 * @param ctx the parse tree
 	 */
@@ -132,16 +142,6 @@ public interface EvaParserListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitElementBodyProperty(EvaParser.ElementBodyPropertyContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link EvaParser#elementBody}.
-	 * @param ctx the parse tree
-	 */
-	void enterElementBody(EvaParser.ElementBodyContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link EvaParser#elementBody}.
-	 * @param ctx the parse tree
-	 */
-	void exitElementBody(EvaParser.ElementBodyContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link EvaParser#elementAttributeListDeclaration}.
 	 * @param ctx the parse tree

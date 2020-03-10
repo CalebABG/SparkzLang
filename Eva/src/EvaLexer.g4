@@ -25,7 +25,6 @@ TagNameSpecialDeclaration
     ;
 
 
-// String declarations
 StringLiteral
 	:	'"' StringCharacter* '"'
     ;
@@ -92,9 +91,13 @@ ValidTagName
     ;
 
 
+/* Tags with ':' start char
+   will need to be in `...`
+   TagNameSpecialDeclaration
+ */
 fragment
 TagNameStart
-    : [:a-zA-Z]
+    : [a-zA-Z]
     | '\u2070'..'\u218F'
     | '\u2C00'..'\u2FEF'
     | '\u3001'..'\uD7FF'

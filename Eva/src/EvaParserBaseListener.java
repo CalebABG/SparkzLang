@@ -27,49 +27,37 @@ public class EvaParserBaseListener implements EvaParserListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterNormalElementDeclaration(EvaParser.NormalElementDeclarationContext ctx) { }
+	@Override public void enterNormalElement(EvaParser.NormalElementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitNormalElementDeclaration(EvaParser.NormalElementDeclarationContext ctx) { }
+	@Override public void exitNormalElement(EvaParser.NormalElementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterCompactElementDeclaration(EvaParser.CompactElementDeclarationContext ctx) { }
+	@Override public void enterCompactElement(EvaParser.CompactElementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitCompactElementDeclaration(EvaParser.CompactElementDeclarationContext ctx) { }
+	@Override public void exitCompactElement(EvaParser.CompactElementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterCompactElementContentDeclaration(EvaParser.CompactElementContentDeclarationContext ctx) { }
+	@Override public void enterCompactExtElement(EvaParser.CompactExtElementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitCompactElementContentDeclaration(EvaParser.CompactElementContentDeclarationContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterElementNormalDeclaration(EvaParser.ElementNormalDeclarationContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitElementNormalDeclaration(EvaParser.ElementNormalDeclarationContext ctx) { }
+	@Override public void exitCompactExtElement(EvaParser.CompactExtElementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -123,6 +111,30 @@ public class EvaParserBaseListener implements EvaParserListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterElementNormalDeclaration(EvaParser.ElementNormalDeclarationContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitElementNormalDeclaration(EvaParser.ElementNormalDeclarationContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterElementBody(EvaParser.ElementBodyContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitElementBody(EvaParser.ElementBodyContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterElementBodyContent(EvaParser.ElementBodyContentContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -154,18 +166,6 @@ public class EvaParserBaseListener implements EvaParserListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitElementBodyProperty(EvaParser.ElementBodyPropertyContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterElementBody(EvaParser.ElementBodyContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitElementBody(EvaParser.ElementBodyContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

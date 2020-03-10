@@ -9,19 +9,17 @@ options {
 Parser rules
 */
 
+
+/* Start grammar rule! */
 eva
     : (elementDeclaration)* EOF
     ;
 
 
 elementDeclaration
-    : elementNormalDeclaration              # normalElementDeclaration
-    | elementCompactDeclaration             # compactElementDeclaration
-    | elementCompactContentDeclaration      # compactElementContentDeclaration
-    ;
-
-elementNormalDeclaration
-    : elementName elementAttributeListDeclaration? elementBody
+    : elementNormalDeclaration              # normalElement
+    | elementCompactDeclaration             # compactElement
+    | elementCompactContentDeclaration      # compactExtElement
     ;
 
 
@@ -45,6 +43,16 @@ elementCompactContent
     ;
 
 
+elementNormalDeclaration
+    : elementName elementAttributeListDeclaration? elementBody
+    ;
+
+
+elementBody
+    : '{' elementBodyContent '}'
+    ;
+
+
 elementBodyContent
     : elementDeclaration* elementBodyText? elementDeclaration*
     | elementBodyText
@@ -61,11 +69,6 @@ elementBodyProperty
     ;
 
 
-elementBody
-    : '{' elementBodyContent '}'
-    ;
-
-
 elementAttributeListDeclaration
     : '(' elementAttributes ')'
     ;
@@ -77,7 +80,8 @@ elementAttributes
 
 
 elementAttribute
-    : elementAttributeName '=' elementAttributeValue
+    : elementAttributeName ('=' elementAttributeValue)?
+//    : elementAttributeName '=' elementAttributeValue
     ;
 
 

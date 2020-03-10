@@ -24,21 +24,20 @@ public class EvaParser extends Parser {
 		SUB=33, MUL=34, DIV=35, BITAND=36, BITOR=37, CARET=38, MOD=39, ARROW=40, 
 		COLONCOLON=41, WS=42, COMMENT=43, LINE_COMMENT=44;
 	public static final int
-		RULE_eva = 0, RULE_elementDeclaration = 1, RULE_elementNormalDeclaration = 2, 
-		RULE_elementCompactDeclaration = 3, RULE_elementCompactContentDeclaration = 4, 
-		RULE_elementCompactStringDeclaration = 5, RULE_elementCompactContent = 6, 
-		RULE_elementBodyContent = 7, RULE_elementBodyText = 8, RULE_elementBodyProperty = 9, 
-		RULE_elementBody = 10, RULE_elementAttributeListDeclaration = 11, RULE_elementAttributes = 12, 
+		RULE_eva = 0, RULE_elementDeclaration = 1, RULE_elementCompactDeclaration = 2, 
+		RULE_elementCompactContentDeclaration = 3, RULE_elementCompactStringDeclaration = 4, 
+		RULE_elementCompactContent = 5, RULE_elementNormalDeclaration = 6, RULE_elementBody = 7, 
+		RULE_elementBodyContent = 8, RULE_elementBodyText = 9, RULE_elementBodyProperty = 10, 
+		RULE_elementAttributeListDeclaration = 11, RULE_elementAttributes = 12, 
 		RULE_elementAttribute = 13, RULE_elementAttributeName = 14, RULE_elementAttributeValue = 15, 
 		RULE_elementName = 16, RULE_string = 17;
 	private static String[] makeRuleNames() {
 		return new String[] {
-			"eva", "elementDeclaration", "elementNormalDeclaration", "elementCompactDeclaration", 
-			"elementCompactContentDeclaration", "elementCompactStringDeclaration", 
-			"elementCompactContent", "elementBodyContent", "elementBodyText", "elementBodyProperty", 
-			"elementBody", "elementAttributeListDeclaration", "elementAttributes", 
-			"elementAttribute", "elementAttributeName", "elementAttributeValue", 
-			"elementName", "string"
+			"eva", "elementDeclaration", "elementCompactDeclaration", "elementCompactContentDeclaration", 
+			"elementCompactStringDeclaration", "elementCompactContent", "elementNormalDeclaration", 
+			"elementBody", "elementBodyContent", "elementBodyText", "elementBodyProperty", 
+			"elementAttributeListDeclaration", "elementAttributes", "elementAttribute", 
+			"elementAttributeName", "elementAttributeValue", "elementName", "string"
 		};
 	}
 	public static final String[] ruleNames = makeRuleNames();
@@ -189,60 +188,60 @@ public class EvaParser extends Parser {
 			super.copyFrom(ctx);
 		}
 	}
-	public static class CompactElementContentDeclarationContext extends ElementDeclarationContext {
-		public ElementCompactContentDeclarationContext elementCompactContentDeclaration() {
-			return getRuleContext(ElementCompactContentDeclarationContext.class,0);
-		}
-		public CompactElementContentDeclarationContext(ElementDeclarationContext ctx) { copyFrom(ctx); }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof EvaParserListener ) ((EvaParserListener)listener).enterCompactElementContentDeclaration(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof EvaParserListener ) ((EvaParserListener)listener).exitCompactElementContentDeclaration(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof EvaParserVisitor ) return ((EvaParserVisitor<? extends T>)visitor).visitCompactElementContentDeclaration(this);
-			else return visitor.visitChildren(this);
-		}
-	}
-	public static class NormalElementDeclarationContext extends ElementDeclarationContext {
-		public ElementNormalDeclarationContext elementNormalDeclaration() {
-			return getRuleContext(ElementNormalDeclarationContext.class,0);
-		}
-		public NormalElementDeclarationContext(ElementDeclarationContext ctx) { copyFrom(ctx); }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof EvaParserListener ) ((EvaParserListener)listener).enterNormalElementDeclaration(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof EvaParserListener ) ((EvaParserListener)listener).exitNormalElementDeclaration(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof EvaParserVisitor ) return ((EvaParserVisitor<? extends T>)visitor).visitNormalElementDeclaration(this);
-			else return visitor.visitChildren(this);
-		}
-	}
-	public static class CompactElementDeclarationContext extends ElementDeclarationContext {
+	public static class CompactElementContext extends ElementDeclarationContext {
 		public ElementCompactDeclarationContext elementCompactDeclaration() {
 			return getRuleContext(ElementCompactDeclarationContext.class,0);
 		}
-		public CompactElementDeclarationContext(ElementDeclarationContext ctx) { copyFrom(ctx); }
+		public CompactElementContext(ElementDeclarationContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof EvaParserListener ) ((EvaParserListener)listener).enterCompactElementDeclaration(this);
+			if ( listener instanceof EvaParserListener ) ((EvaParserListener)listener).enterCompactElement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof EvaParserListener ) ((EvaParserListener)listener).exitCompactElementDeclaration(this);
+			if ( listener instanceof EvaParserListener ) ((EvaParserListener)listener).exitCompactElement(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof EvaParserVisitor ) return ((EvaParserVisitor<? extends T>)visitor).visitCompactElementDeclaration(this);
+			if ( visitor instanceof EvaParserVisitor ) return ((EvaParserVisitor<? extends T>)visitor).visitCompactElement(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+	public static class NormalElementContext extends ElementDeclarationContext {
+		public ElementNormalDeclarationContext elementNormalDeclaration() {
+			return getRuleContext(ElementNormalDeclarationContext.class,0);
+		}
+		public NormalElementContext(ElementDeclarationContext ctx) { copyFrom(ctx); }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof EvaParserListener ) ((EvaParserListener)listener).enterNormalElement(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof EvaParserListener ) ((EvaParserListener)listener).exitNormalElement(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof EvaParserVisitor ) return ((EvaParserVisitor<? extends T>)visitor).visitNormalElement(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+	public static class CompactExtElementContext extends ElementDeclarationContext {
+		public ElementCompactContentDeclarationContext elementCompactContentDeclaration() {
+			return getRuleContext(ElementCompactContentDeclarationContext.class,0);
+		}
+		public CompactExtElementContext(ElementDeclarationContext ctx) { copyFrom(ctx); }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof EvaParserListener ) ((EvaParserListener)listener).enterCompactExtElement(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof EvaParserListener ) ((EvaParserListener)listener).exitCompactExtElement(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof EvaParserVisitor ) return ((EvaParserVisitor<? extends T>)visitor).visitCompactExtElement(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -255,7 +254,7 @@ public class EvaParser extends Parser {
 			_errHandler.sync(this);
 			switch ( getInterpreter().adaptivePredict(_input,1,_ctx) ) {
 			case 1:
-				_localctx = new NormalElementDeclarationContext(_localctx);
+				_localctx = new NormalElementContext(_localctx);
 				enterOuterAlt(_localctx, 1);
 				{
 				setState(44);
@@ -263,7 +262,7 @@ public class EvaParser extends Parser {
 				}
 				break;
 			case 2:
-				_localctx = new CompactElementDeclarationContext(_localctx);
+				_localctx = new CompactElementContext(_localctx);
 				enterOuterAlt(_localctx, 2);
 				{
 				setState(45);
@@ -271,76 +270,13 @@ public class EvaParser extends Parser {
 				}
 				break;
 			case 3:
-				_localctx = new CompactElementContentDeclarationContext(_localctx);
+				_localctx = new CompactExtElementContext(_localctx);
 				enterOuterAlt(_localctx, 3);
 				{
 				setState(46);
 				elementCompactContentDeclaration();
 				}
 				break;
-			}
-		}
-		catch (RecognitionException re) {
-			_localctx.exception = re;
-			_errHandler.reportError(this, re);
-			_errHandler.recover(this, re);
-		}
-		finally {
-			exitRule();
-		}
-		return _localctx;
-	}
-
-	public static class ElementNormalDeclarationContext extends ParserRuleContext {
-		public ElementNameContext elementName() {
-			return getRuleContext(ElementNameContext.class,0);
-		}
-		public ElementBodyContext elementBody() {
-			return getRuleContext(ElementBodyContext.class,0);
-		}
-		public ElementAttributeListDeclarationContext elementAttributeListDeclaration() {
-			return getRuleContext(ElementAttributeListDeclarationContext.class,0);
-		}
-		public ElementNormalDeclarationContext(ParserRuleContext parent, int invokingState) {
-			super(parent, invokingState);
-		}
-		@Override public int getRuleIndex() { return RULE_elementNormalDeclaration; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof EvaParserListener ) ((EvaParserListener)listener).enterElementNormalDeclaration(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof EvaParserListener ) ((EvaParserListener)listener).exitElementNormalDeclaration(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof EvaParserVisitor ) return ((EvaParserVisitor<? extends T>)visitor).visitElementNormalDeclaration(this);
-			else return visitor.visitChildren(this);
-		}
-	}
-
-	public final ElementNormalDeclarationContext elementNormalDeclaration() throws RecognitionException {
-		ElementNormalDeclarationContext _localctx = new ElementNormalDeclarationContext(_ctx, getState());
-		enterRule(_localctx, 4, RULE_elementNormalDeclaration);
-		int _la;
-		try {
-			enterOuterAlt(_localctx, 1);
-			{
-			setState(49);
-			elementName();
-			setState(51);
-			_errHandler.sync(this);
-			_la = _input.LA(1);
-			if (_la==LPAREN) {
-				{
-				setState(50);
-				elementAttributeListDeclaration();
-				}
-			}
-
-			setState(53);
-			elementBody();
 			}
 		}
 		catch (RecognitionException re) {
@@ -386,34 +322,34 @@ public class EvaParser extends Parser {
 
 	public final ElementCompactDeclarationContext elementCompactDeclaration() throws RecognitionException {
 		ElementCompactDeclarationContext _localctx = new ElementCompactDeclarationContext(_ctx, getState());
-		enterRule(_localctx, 6, RULE_elementCompactDeclaration);
+		enterRule(_localctx, 4, RULE_elementCompactDeclaration);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(55);
+			setState(49);
 			elementName();
-			setState(57);
+			setState(51);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if (_la==LPAREN) {
 				{
-				setState(56);
+				setState(50);
 				elementAttributeListDeclaration();
 				}
 			}
 
-			setState(60);
+			setState(54);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if (_la==COLON) {
 				{
-				setState(59);
+				setState(53);
 				elementCompactStringDeclaration();
 				}
 			}
 
-			setState(62);
+			setState(56);
 			match(SEMI);
 			}
 		}
@@ -463,36 +399,36 @@ public class EvaParser extends Parser {
 
 	public final ElementCompactContentDeclarationContext elementCompactContentDeclaration() throws RecognitionException {
 		ElementCompactContentDeclarationContext _localctx = new ElementCompactContentDeclarationContext(_ctx, getState());
-		enterRule(_localctx, 8, RULE_elementCompactContentDeclaration);
+		enterRule(_localctx, 6, RULE_elementCompactContentDeclaration);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(64);
+			setState(58);
 			elementName();
-			setState(66);
+			setState(60);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if (_la==LPAREN) {
 				{
-				setState(65);
+				setState(59);
 				elementAttributeListDeclaration();
 				}
 			}
 
-			setState(69);
+			setState(63);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if (_la==COLON) {
 				{
-				setState(68);
+				setState(62);
 				elementCompactStringDeclaration();
 				}
 			}
 
-			setState(71);
+			setState(65);
 			match(GT);
-			setState(72);
+			setState(66);
 			elementCompactContent();
 			}
 		}
@@ -533,13 +469,13 @@ public class EvaParser extends Parser {
 
 	public final ElementCompactStringDeclarationContext elementCompactStringDeclaration() throws RecognitionException {
 		ElementCompactStringDeclarationContext _localctx = new ElementCompactStringDeclarationContext(_ctx, getState());
-		enterRule(_localctx, 10, RULE_elementCompactStringDeclaration);
+		enterRule(_localctx, 8, RULE_elementCompactStringDeclaration);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(74);
+			setState(68);
 			match(COLON);
-			setState(75);
+			setState(69);
 			string();
 			}
 		}
@@ -579,12 +515,125 @@ public class EvaParser extends Parser {
 
 	public final ElementCompactContentContext elementCompactContent() throws RecognitionException {
 		ElementCompactContentContext _localctx = new ElementCompactContentContext(_ctx, getState());
-		enterRule(_localctx, 12, RULE_elementCompactContent);
+		enterRule(_localctx, 10, RULE_elementCompactContent);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(77);
+			setState(71);
 			elementDeclaration();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	public static class ElementNormalDeclarationContext extends ParserRuleContext {
+		public ElementNameContext elementName() {
+			return getRuleContext(ElementNameContext.class,0);
+		}
+		public ElementBodyContext elementBody() {
+			return getRuleContext(ElementBodyContext.class,0);
+		}
+		public ElementAttributeListDeclarationContext elementAttributeListDeclaration() {
+			return getRuleContext(ElementAttributeListDeclarationContext.class,0);
+		}
+		public ElementNormalDeclarationContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_elementNormalDeclaration; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof EvaParserListener ) ((EvaParserListener)listener).enterElementNormalDeclaration(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof EvaParserListener ) ((EvaParserListener)listener).exitElementNormalDeclaration(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof EvaParserVisitor ) return ((EvaParserVisitor<? extends T>)visitor).visitElementNormalDeclaration(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+
+	public final ElementNormalDeclarationContext elementNormalDeclaration() throws RecognitionException {
+		ElementNormalDeclarationContext _localctx = new ElementNormalDeclarationContext(_ctx, getState());
+		enterRule(_localctx, 12, RULE_elementNormalDeclaration);
+		int _la;
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(73);
+			elementName();
+			setState(75);
+			_errHandler.sync(this);
+			_la = _input.LA(1);
+			if (_la==LPAREN) {
+				{
+				setState(74);
+				elementAttributeListDeclaration();
+				}
+			}
+
+			setState(77);
+			elementBody();
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	public static class ElementBodyContext extends ParserRuleContext {
+		public TerminalNode LBRACE() { return getToken(EvaParser.LBRACE, 0); }
+		public ElementBodyContentContext elementBodyContent() {
+			return getRuleContext(ElementBodyContentContext.class,0);
+		}
+		public TerminalNode RBRACE() { return getToken(EvaParser.RBRACE, 0); }
+		public ElementBodyContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_elementBody; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof EvaParserListener ) ((EvaParserListener)listener).enterElementBody(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof EvaParserListener ) ((EvaParserListener)listener).exitElementBody(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof EvaParserVisitor ) return ((EvaParserVisitor<? extends T>)visitor).visitElementBody(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+
+	public final ElementBodyContext elementBody() throws RecognitionException {
+		ElementBodyContext _localctx = new ElementBodyContext(_ctx, getState());
+		enterRule(_localctx, 14, RULE_elementBody);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(79);
+			match(LBRACE);
+			setState(80);
+			elementBodyContent();
+			setState(81);
+			match(RBRACE);
 			}
 		}
 		catch (RecognitionException re) {
@@ -629,53 +678,53 @@ public class EvaParser extends Parser {
 
 	public final ElementBodyContentContext elementBodyContent() throws RecognitionException {
 		ElementBodyContentContext _localctx = new ElementBodyContentContext(_ctx, getState());
-		enterRule(_localctx, 14, RULE_elementBodyContent);
+		enterRule(_localctx, 16, RULE_elementBodyContent);
 		int _la;
 		try {
 			int _alt;
-			setState(95);
+			setState(99);
 			_errHandler.sync(this);
 			switch ( getInterpreter().adaptivePredict(_input,10,_ctx) ) {
 			case 1:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(82);
+				setState(86);
 				_errHandler.sync(this);
 				_alt = getInterpreter().adaptivePredict(_input,7,_ctx);
 				while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 					if ( _alt==1 ) {
 						{
 						{
-						setState(79);
+						setState(83);
 						elementDeclaration();
 						}
 						} 
 					}
-					setState(84);
+					setState(88);
 					_errHandler.sync(this);
 					_alt = getInterpreter().adaptivePredict(_input,7,_ctx);
 				}
-				setState(86);
+				setState(90);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				if (_la==ElementBodyPropertDeclaration) {
 					{
-					setState(85);
+					setState(89);
 					elementBodyText();
 					}
 				}
 
-				setState(91);
+				setState(95);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 				while (_la==TagNameDeclaration || _la==TagNameSpecialDeclaration) {
 					{
 					{
-					setState(88);
+					setState(92);
 					elementDeclaration();
 					}
 					}
-					setState(93);
+					setState(97);
 					_errHandler.sync(this);
 					_la = _input.LA(1);
 				}
@@ -684,7 +733,7 @@ public class EvaParser extends Parser {
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(94);
+				setState(98);
 				elementBodyText();
 				}
 				break;
@@ -730,15 +779,15 @@ public class EvaParser extends Parser {
 
 	public final ElementBodyTextContext elementBodyText() throws RecognitionException {
 		ElementBodyTextContext _localctx = new ElementBodyTextContext(_ctx, getState());
-		enterRule(_localctx, 16, RULE_elementBodyText);
+		enterRule(_localctx, 18, RULE_elementBodyText);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(97);
+			setState(101);
 			elementBodyProperty();
-			setState(98);
+			setState(102);
 			match(ASSIGN);
-			setState(99);
+			setState(103);
 			string();
 			}
 		}
@@ -776,62 +825,12 @@ public class EvaParser extends Parser {
 
 	public final ElementBodyPropertyContext elementBodyProperty() throws RecognitionException {
 		ElementBodyPropertyContext _localctx = new ElementBodyPropertyContext(_ctx, getState());
-		enterRule(_localctx, 18, RULE_elementBodyProperty);
+		enterRule(_localctx, 20, RULE_elementBodyProperty);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(101);
-			match(ElementBodyPropertDeclaration);
-			}
-		}
-		catch (RecognitionException re) {
-			_localctx.exception = re;
-			_errHandler.reportError(this, re);
-			_errHandler.recover(this, re);
-		}
-		finally {
-			exitRule();
-		}
-		return _localctx;
-	}
-
-	public static class ElementBodyContext extends ParserRuleContext {
-		public TerminalNode LBRACE() { return getToken(EvaParser.LBRACE, 0); }
-		public ElementBodyContentContext elementBodyContent() {
-			return getRuleContext(ElementBodyContentContext.class,0);
-		}
-		public TerminalNode RBRACE() { return getToken(EvaParser.RBRACE, 0); }
-		public ElementBodyContext(ParserRuleContext parent, int invokingState) {
-			super(parent, invokingState);
-		}
-		@Override public int getRuleIndex() { return RULE_elementBody; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof EvaParserListener ) ((EvaParserListener)listener).enterElementBody(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof EvaParserListener ) ((EvaParserListener)listener).exitElementBody(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof EvaParserVisitor ) return ((EvaParserVisitor<? extends T>)visitor).visitElementBody(this);
-			else return visitor.visitChildren(this);
-		}
-	}
-
-	public final ElementBodyContext elementBody() throws RecognitionException {
-		ElementBodyContext _localctx = new ElementBodyContext(_ctx, getState());
-		enterRule(_localctx, 20, RULE_elementBody);
-		try {
-			enterOuterAlt(_localctx, 1);
-			{
-			setState(103);
-			match(LBRACE);
-			setState(104);
-			elementBodyContent();
 			setState(105);
-			match(RBRACE);
+			match(ElementBodyPropertDeclaration);
 			}
 		}
 		catch (RecognitionException re) {
@@ -993,15 +992,24 @@ public class EvaParser extends Parser {
 	public final ElementAttributeContext elementAttribute() throws RecognitionException {
 		ElementAttributeContext _localctx = new ElementAttributeContext(_ctx, getState());
 		enterRule(_localctx, 26, RULE_elementAttribute);
+		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(119);
 			elementAttributeName();
-			setState(120);
-			match(ASSIGN);
-			setState(121);
-			elementAttributeValue();
+			setState(122);
+			_errHandler.sync(this);
+			_la = _input.LA(1);
+			if (_la==ASSIGN) {
+				{
+				setState(120);
+				match(ASSIGN);
+				setState(121);
+				elementAttributeValue();
+				}
+			}
+
 			}
 		}
 		catch (RecognitionException re) {
@@ -1042,7 +1050,7 @@ public class EvaParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(123);
+			setState(124);
 			match(TagAttribute);
 			}
 		}
@@ -1084,7 +1092,7 @@ public class EvaParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(125);
+			setState(126);
 			match(StringLiteral);
 			}
 		}
@@ -1128,7 +1136,7 @@ public class EvaParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(127);
+			setState(128);
 			_la = _input.LA(1);
 			if ( !(_la==TagNameDeclaration || _la==TagNameSpecialDeclaration) ) {
 			_errHandler.recoverInline(this);
@@ -1178,7 +1186,7 @@ public class EvaParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(129);
+			setState(130);
 			match(StringLiteral);
 			}
 		}
@@ -1194,38 +1202,39 @@ public class EvaParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3.\u0086\4\2\t\2\4"+
+		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3.\u0087\4\2\t\2\4"+
 		"\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\4\t\t\t\4\n\t\n\4\13\t"+
 		"\13\4\f\t\f\4\r\t\r\4\16\t\16\4\17\t\17\4\20\t\20\4\21\t\21\4\22\t\22"+
 		"\4\23\t\23\3\2\7\2(\n\2\f\2\16\2+\13\2\3\2\3\2\3\3\3\3\3\3\5\3\62\n\3"+
-		"\3\4\3\4\5\4\66\n\4\3\4\3\4\3\5\3\5\5\5<\n\5\3\5\5\5?\n\5\3\5\3\5\3\6"+
-		"\3\6\5\6E\n\6\3\6\5\6H\n\6\3\6\3\6\3\6\3\7\3\7\3\7\3\b\3\b\3\t\7\tS\n"+
-		"\t\f\t\16\tV\13\t\3\t\5\tY\n\t\3\t\7\t\\\n\t\f\t\16\t_\13\t\3\t\5\tb\n"+
-		"\t\3\n\3\n\3\n\3\n\3\13\3\13\3\f\3\f\3\f\3\f\3\r\3\r\3\r\3\r\3\16\3\16"+
-		"\3\16\7\16u\n\16\f\16\16\16x\13\16\3\17\3\17\3\17\3\17\3\20\3\20\3\21"+
-		"\3\21\3\22\3\22\3\23\3\23\3\23\2\2\24\2\4\6\b\n\f\16\20\22\24\26\30\32"+
-		"\34\36 \"$\2\3\4\2\3\3\6\6\2\u0080\2)\3\2\2\2\4\61\3\2\2\2\6\63\3\2\2"+
-		"\2\b9\3\2\2\2\nB\3\2\2\2\fL\3\2\2\2\16O\3\2\2\2\20a\3\2\2\2\22c\3\2\2"+
-		"\2\24g\3\2\2\2\26i\3\2\2\2\30m\3\2\2\2\32q\3\2\2\2\34y\3\2\2\2\36}\3\2"+
-		"\2\2 \177\3\2\2\2\"\u0081\3\2\2\2$\u0083\3\2\2\2&(\5\4\3\2\'&\3\2\2\2"+
-		"(+\3\2\2\2)\'\3\2\2\2)*\3\2\2\2*,\3\2\2\2+)\3\2\2\2,-\7\2\2\3-\3\3\2\2"+
-		"\2.\62\5\6\4\2/\62\5\b\5\2\60\62\5\n\6\2\61.\3\2\2\2\61/\3\2\2\2\61\60"+
-		"\3\2\2\2\62\5\3\2\2\2\63\65\5\"\22\2\64\66\5\30\r\2\65\64\3\2\2\2\65\66"+
-		"\3\2\2\2\66\67\3\2\2\2\678\5\26\f\28\7\3\2\2\29;\5\"\22\2:<\5\30\r\2;"+
-		":\3\2\2\2;<\3\2\2\2<>\3\2\2\2=?\5\f\7\2>=\3\2\2\2>?\3\2\2\2?@\3\2\2\2"+
-		"@A\7\20\2\2A\t\3\2\2\2BD\5\"\22\2CE\5\30\r\2DC\3\2\2\2DE\3\2\2\2EG\3\2"+
-		"\2\2FH\5\f\7\2GF\3\2\2\2GH\3\2\2\2HI\3\2\2\2IJ\7\24\2\2JK\5\16\b\2K\13"+
-		"\3\2\2\2LM\7\31\2\2MN\5$\23\2N\r\3\2\2\2OP\5\4\3\2P\17\3\2\2\2QS\5\4\3"+
-		"\2RQ\3\2\2\2SV\3\2\2\2TR\3\2\2\2TU\3\2\2\2UX\3\2\2\2VT\3\2\2\2WY\5\22"+
-		"\n\2XW\3\2\2\2XY\3\2\2\2Y]\3\2\2\2Z\\\5\4\3\2[Z\3\2\2\2\\_\3\2\2\2][\3"+
-		"\2\2\2]^\3\2\2\2^b\3\2\2\2_]\3\2\2\2`b\5\22\n\2aT\3\2\2\2a`\3\2\2\2b\21"+
-		"\3\2\2\2cd\5\24\13\2de\7\23\2\2ef\5$\23\2f\23\3\2\2\2gh\7\5\2\2h\25\3"+
-		"\2\2\2ij\7\f\2\2jk\5\20\t\2kl\7\r\2\2l\27\3\2\2\2mn\7\n\2\2no\5\32\16"+
-		"\2op\7\13\2\2p\31\3\2\2\2qv\5\34\17\2rs\7\21\2\2su\5\34\17\2tr\3\2\2\2"+
-		"ux\3\2\2\2vt\3\2\2\2vw\3\2\2\2w\33\3\2\2\2xv\3\2\2\2yz\5\36\20\2z{\7\23"+
-		"\2\2{|\5 \21\2|\35\3\2\2\2}~\7\4\2\2~\37\3\2\2\2\177\u0080\7\7\2\2\u0080"+
-		"!\3\2\2\2\u0081\u0082\t\2\2\2\u0082#\3\2\2\2\u0083\u0084\7\7\2\2\u0084"+
-		"%\3\2\2\2\16)\61\65;>DGTX]av";
+		"\3\4\3\4\5\4\66\n\4\3\4\5\49\n\4\3\4\3\4\3\5\3\5\5\5?\n\5\3\5\5\5B\n\5"+
+		"\3\5\3\5\3\5\3\6\3\6\3\6\3\7\3\7\3\b\3\b\5\bN\n\b\3\b\3\b\3\t\3\t\3\t"+
+		"\3\t\3\n\7\nW\n\n\f\n\16\nZ\13\n\3\n\5\n]\n\n\3\n\7\n`\n\n\f\n\16\nc\13"+
+		"\n\3\n\5\nf\n\n\3\13\3\13\3\13\3\13\3\f\3\f\3\r\3\r\3\r\3\r\3\16\3\16"+
+		"\3\16\7\16u\n\16\f\16\16\16x\13\16\3\17\3\17\3\17\5\17}\n\17\3\20\3\20"+
+		"\3\21\3\21\3\22\3\22\3\23\3\23\3\23\2\2\24\2\4\6\b\n\f\16\20\22\24\26"+
+		"\30\32\34\36 \"$\2\3\4\2\3\3\6\6\2\u0082\2)\3\2\2\2\4\61\3\2\2\2\6\63"+
+		"\3\2\2\2\b<\3\2\2\2\nF\3\2\2\2\fI\3\2\2\2\16K\3\2\2\2\20Q\3\2\2\2\22e"+
+		"\3\2\2\2\24g\3\2\2\2\26k\3\2\2\2\30m\3\2\2\2\32q\3\2\2\2\34y\3\2\2\2\36"+
+		"~\3\2\2\2 \u0080\3\2\2\2\"\u0082\3\2\2\2$\u0084\3\2\2\2&(\5\4\3\2\'&\3"+
+		"\2\2\2(+\3\2\2\2)\'\3\2\2\2)*\3\2\2\2*,\3\2\2\2+)\3\2\2\2,-\7\2\2\3-\3"+
+		"\3\2\2\2.\62\5\16\b\2/\62\5\6\4\2\60\62\5\b\5\2\61.\3\2\2\2\61/\3\2\2"+
+		"\2\61\60\3\2\2\2\62\5\3\2\2\2\63\65\5\"\22\2\64\66\5\30\r\2\65\64\3\2"+
+		"\2\2\65\66\3\2\2\2\668\3\2\2\2\679\5\n\6\28\67\3\2\2\289\3\2\2\29:\3\2"+
+		"\2\2:;\7\20\2\2;\7\3\2\2\2<>\5\"\22\2=?\5\30\r\2>=\3\2\2\2>?\3\2\2\2?"+
+		"A\3\2\2\2@B\5\n\6\2A@\3\2\2\2AB\3\2\2\2BC\3\2\2\2CD\7\24\2\2DE\5\f\7\2"+
+		"E\t\3\2\2\2FG\7\31\2\2GH\5$\23\2H\13\3\2\2\2IJ\5\4\3\2J\r\3\2\2\2KM\5"+
+		"\"\22\2LN\5\30\r\2ML\3\2\2\2MN\3\2\2\2NO\3\2\2\2OP\5\20\t\2P\17\3\2\2"+
+		"\2QR\7\f\2\2RS\5\22\n\2ST\7\r\2\2T\21\3\2\2\2UW\5\4\3\2VU\3\2\2\2WZ\3"+
+		"\2\2\2XV\3\2\2\2XY\3\2\2\2Y\\\3\2\2\2ZX\3\2\2\2[]\5\24\13\2\\[\3\2\2\2"+
+		"\\]\3\2\2\2]a\3\2\2\2^`\5\4\3\2_^\3\2\2\2`c\3\2\2\2a_\3\2\2\2ab\3\2\2"+
+		"\2bf\3\2\2\2ca\3\2\2\2df\5\24\13\2eX\3\2\2\2ed\3\2\2\2f\23\3\2\2\2gh\5"+
+		"\26\f\2hi\7\23\2\2ij\5$\23\2j\25\3\2\2\2kl\7\5\2\2l\27\3\2\2\2mn\7\n\2"+
+		"\2no\5\32\16\2op\7\13\2\2p\31\3\2\2\2qv\5\34\17\2rs\7\21\2\2su\5\34\17"+
+		"\2tr\3\2\2\2ux\3\2\2\2vt\3\2\2\2vw\3\2\2\2w\33\3\2\2\2xv\3\2\2\2y|\5\36"+
+		"\20\2z{\7\23\2\2{}\5 \21\2|z\3\2\2\2|}\3\2\2\2}\35\3\2\2\2~\177\7\4\2"+
+		"\2\177\37\3\2\2\2\u0080\u0081\7\7\2\2\u0081!\3\2\2\2\u0082\u0083\t\2\2"+
+		"\2\u0083#\3\2\2\2\u0084\u0085\7\7\2\2\u0085%\3\2\2\2\17)\61\658>AMX\\"+
+		"aev|";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {

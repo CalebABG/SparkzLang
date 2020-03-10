@@ -2,8 +2,11 @@
 
 html{
     head(@title="A simple HTML Document");
+
     body{
         p: "This is a very simple HTML document";
         p: "It only has two paragraphs";
+
+        div > audio(@id="player", @autoplay="false", @controls, @preload, @autobuffer);
     }
 }

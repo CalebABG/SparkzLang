@@ -7,7 +7,7 @@ public class Main {
     {
         try
         {
-            CharStream input = CharStreams.fromStream(Main.class.getResourceAsStream("tests/index.eva"));
+            CharStream input = CharStreams.fromStream(Main.class.getResourceAsStream("transpiler_examples/test1.eva"));
 
             EvaLexer lexer = new EvaLexer(input);
 
