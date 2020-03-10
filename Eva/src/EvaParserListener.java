@@ -133,46 +133,6 @@ public interface EvaParserListener extends ParseTreeListener {
 	 */
 	void exitElementBodyProperty(EvaParser.ElementBodyPropertyContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link EvaParser#tagAttributeDeclaration}.
-	 * @param ctx the parse tree
-	 */
-	void enterTagAttributeDeclaration(EvaParser.TagAttributeDeclarationContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link EvaParser#tagAttributeDeclaration}.
-	 * @param ctx the parse tree
-	 */
-	void exitTagAttributeDeclaration(EvaParser.TagAttributeDeclarationContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link EvaParser#tagAttributeList}.
-	 * @param ctx the parse tree
-	 */
-	void enterTagAttributeList(EvaParser.TagAttributeListContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link EvaParser#tagAttributeList}.
-	 * @param ctx the parse tree
-	 */
-	void exitTagAttributeList(EvaParser.TagAttributeListContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link EvaParser#tagAttribute}.
-	 * @param ctx the parse tree
-	 */
-	void enterTagAttribute(EvaParser.TagAttributeContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link EvaParser#tagAttribute}.
-	 * @param ctx the parse tree
-	 */
-	void exitTagAttribute(EvaParser.TagAttributeContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link EvaParser#tagAttributeValue}.
-	 * @param ctx the parse tree
-	 */
-	void enterTagAttributeValue(EvaParser.TagAttributeValueContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link EvaParser#tagAttributeValue}.
-	 * @param ctx the parse tree
-	 */
-	void exitTagAttributeValue(EvaParser.TagAttributeValueContext ctx);
-	/**
 	 * Enter a parse tree produced by {@link EvaParser#elementBody}.
 	 * @param ctx the parse tree
 	 */
@@ -183,15 +143,65 @@ public interface EvaParserListener extends ParseTreeListener {
 	 */
 	void exitElementBody(EvaParser.ElementBodyContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link EvaParser#tagAttributeName}.
+	 * Enter a parse tree produced by {@link EvaParser#elementAttributeListDeclaration}.
 	 * @param ctx the parse tree
 	 */
-	void enterTagAttributeName(EvaParser.TagAttributeNameContext ctx);
+	void enterElementAttributeListDeclaration(EvaParser.ElementAttributeListDeclarationContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link EvaParser#tagAttributeName}.
+	 * Exit a parse tree produced by {@link EvaParser#elementAttributeListDeclaration}.
 	 * @param ctx the parse tree
 	 */
-	void exitTagAttributeName(EvaParser.TagAttributeNameContext ctx);
+	void exitElementAttributeListDeclaration(EvaParser.ElementAttributeListDeclarationContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link EvaParser#elementAttributes}.
+	 * @param ctx the parse tree
+	 */
+	void enterElementAttributes(EvaParser.ElementAttributesContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link EvaParser#elementAttributes}.
+	 * @param ctx the parse tree
+	 */
+	void exitElementAttributes(EvaParser.ElementAttributesContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link EvaParser#elementAttribute}.
+	 * @param ctx the parse tree
+	 */
+	void enterElementAttribute(EvaParser.ElementAttributeContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link EvaParser#elementAttribute}.
+	 * @param ctx the parse tree
+	 */
+	void exitElementAttribute(EvaParser.ElementAttributeContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link EvaParser#elementAttributeName}.
+	 * @param ctx the parse tree
+	 */
+	void enterElementAttributeName(EvaParser.ElementAttributeNameContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link EvaParser#elementAttributeName}.
+	 * @param ctx the parse tree
+	 */
+	void exitElementAttributeName(EvaParser.ElementAttributeNameContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link EvaParser#elementAttributeValue}.
+	 * @param ctx the parse tree
+	 */
+	void enterElementAttributeValue(EvaParser.ElementAttributeValueContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link EvaParser#elementAttributeValue}.
+	 * @param ctx the parse tree
+	 */
+	void exitElementAttributeValue(EvaParser.ElementAttributeValueContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link EvaParser#elementName}.
+	 * @param ctx the parse tree
+	 */
+	void enterElementName(EvaParser.ElementNameContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link EvaParser#elementName}.
+	 * @param ctx the parse tree
+	 */
+	void exitElementName(EvaParser.ElementNameContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link EvaParser#string}.
 	 * @param ctx the parse tree
@@ -202,14 +212,4 @@ public interface EvaParserListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitString(EvaParser.StringContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link EvaParser#tagName}.
-	 * @param ctx the parse tree
-	 */
-	void enterTagName(EvaParser.TagNameContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link EvaParser#tagName}.
-	 * @param ctx the parse tree
-	 */
-	void exitTagName(EvaParser.TagNameContext ctx);
 }

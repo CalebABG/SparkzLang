@@ -1,5 +1,5 @@
-TagNameDeclaration=1
-TagAttribute=2
+TagAttribute=1
+TagNameDeclaration=2
 ElementBodyPropertDeclaration=3
 TagNameSpecialDeclaration=4
 StringLiteral=5

@@ -85,51 +85,51 @@ public interface EvaParserVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitElementBodyProperty(EvaParser.ElementBodyPropertyContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link EvaParser#tagAttributeDeclaration}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitTagAttributeDeclaration(EvaParser.TagAttributeDeclarationContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link EvaParser#tagAttributeList}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitTagAttributeList(EvaParser.TagAttributeListContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link EvaParser#tagAttribute}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitTagAttribute(EvaParser.TagAttributeContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link EvaParser#tagAttributeValue}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitTagAttributeValue(EvaParser.TagAttributeValueContext ctx);
-	/**
 	 * Visit a parse tree produced by {@link EvaParser#elementBody}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	T visitElementBody(EvaParser.ElementBodyContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link EvaParser#tagAttributeName}.
+	 * Visit a parse tree produced by {@link EvaParser#elementAttributeListDeclaration}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitTagAttributeName(EvaParser.TagAttributeNameContext ctx);
+	T visitElementAttributeListDeclaration(EvaParser.ElementAttributeListDeclarationContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link EvaParser#elementAttributes}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitElementAttributes(EvaParser.ElementAttributesContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link EvaParser#elementAttribute}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitElementAttribute(EvaParser.ElementAttributeContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link EvaParser#elementAttributeName}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitElementAttributeName(EvaParser.ElementAttributeNameContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link EvaParser#elementAttributeValue}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitElementAttributeValue(EvaParser.ElementAttributeValueContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link EvaParser#elementName}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitElementName(EvaParser.ElementNameContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link EvaParser#string}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	T visitString(EvaParser.StringContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link EvaParser#tagName}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitTagName(EvaParser.TagNameContext ctx);
 }

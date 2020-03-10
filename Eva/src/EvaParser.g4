@@ -21,17 +21,17 @@ elementDeclaration
     ;
 
 elementNormalDeclaration
-    : tagName tagAttributeDeclaration? elementBody
+    : elementName elementAttributeListDeclaration? elementBody
     ;
 
 
 elementCompactDeclaration
-    : tagName tagAttributeDeclaration? elementCompactStringDeclaration? ';'
+    : elementName elementAttributeListDeclaration? elementCompactStringDeclaration? ';'
     ;
 
 
 elementCompactContentDeclaration
-    : tagName tagAttributeDeclaration? elementCompactStringDeclaration? '>' elementCompactContent
+    : elementName elementAttributeListDeclaration? elementCompactStringDeclaration? '>' elementCompactContent
     ;
 
 
@@ -61,42 +61,42 @@ elementBodyProperty
     ;
 
 
-tagAttributeDeclaration
-    : '(' tagAttributeList ')'
-    ;
-
-
-tagAttributeList
-    : tagAttribute (',' tagAttribute)*
-    ;
-
-
-tagAttribute
-    : tagAttributeName '=' tagAttributeValue
-    ;
-
-
-tagAttributeValue
-    : StringLiteral
-    ;
-
-
 elementBody
     : '{' elementBodyContent '}'
     ;
 
 
-tagAttributeName
+elementAttributeListDeclaration
+    : '(' elementAttributes ')'
+    ;
+
+
+elementAttributes
+    : elementAttribute (',' elementAttribute)*
+    ;
+
+
+elementAttribute
+    : elementAttributeName '=' elementAttributeValue
+    ;
+
+
+elementAttributeName
     : TagAttribute
+    ;
+
+
+elementAttributeValue
+    : StringLiteral
+    ;
+
+
+elementName
+    : TagNameDeclaration
+    | TagNameSpecialDeclaration
     ;
 
 
 string
     : StringLiteral
-    ;
-
-
-tagName
-    : TagNameDeclaration
-    | TagNameSpecialDeclaration
     ;

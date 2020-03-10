@@ -1,4 +1,4 @@
-// Generated from C:/Users/flame/Documents/GitHub/Eva-ElegantMarkup/Eva/src\EvaLexer.g4 by ANTLR 4.8
+// Generated from c:\Users\flame\Documents\GitHub\Eva-ElegantMarkup\Eva\src/EvaLexer.g4 by ANTLR 4.7.1
 import org.antlr.v4.runtime.Lexer;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.Token;
@@ -10,7 +10,7 @@ import org.antlr.v4.runtime.misc.*;
 
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
 public class EvaLexer extends Lexer {
-	static { RuntimeMetaData.checkVersion("4.8", RuntimeMetaData.VERSION); }
+	static { RuntimeMetaData.checkVersion("4.7.1", RuntimeMetaData.VERSION); }
 
 	protected static final DFA[] _decisionToDFA;
 	protected static final PredictionContextCache _sharedContextCache =
@@ -31,42 +31,33 @@ public class EvaLexer extends Lexer {
 		"DEFAULT_MODE"
 	};
 
-	private static String[] makeRuleNames() {
-		return new String[] {
-			"TagNameDeclaration", "TagAttribute", "ElementBodyPropertDeclaration", 
-			"TagNameSpecialDeclaration", "StringLiteral", "AT", "POUND", "LPAREN", 
-			"RPAREN", "LBRACE", "RBRACE", "LBRACK", "RBRACK", "SEMI", "COMMA", "DOT", 
-			"ASSIGN", "GT", "LT", "BANG", "TILDE", "QUESTION", "COLON", "EQUAL", 
-			"LE", "GE", "NOTEQUAL", "AND", "OR", "INC", "DEC", "ADD", "SUB", "MUL", 
-			"DIV", "BITAND", "BITOR", "CARET", "MOD", "ARROW", "COLONCOLON", "StringCharacter", 
-			"EscapeSequence", "ValidTagName", "TagNameStart", "TagNamePart", "Digit", 
-			"WS", "COMMENT", "LINE_COMMENT"
-		};
-	}
-	public static final String[] ruleNames = makeRuleNames();
+	public static final String[] ruleNames = {
+		"TagNameDeclaration", "TagAttribute", "ElementBodyPropertDeclaration", 
+		"TagNameSpecialDeclaration", "StringLiteral", "AT", "POUND", "LPAREN", 
+		"RPAREN", "LBRACE", "RBRACE", "LBRACK", "RBRACK", "SEMI", "COMMA", "DOT", 
+		"ASSIGN", "GT", "LT", "BANG", "TILDE", "QUESTION", "COLON", "EQUAL", "LE", 
+		"GE", "NOTEQUAL", "AND", "OR", "INC", "DEC", "ADD", "SUB", "MUL", "DIV", 
+		"BITAND", "BITOR", "CARET", "MOD", "ARROW", "COLONCOLON", "StringCharacter", 
+		"EscapeSequence", "ValidTagName", "TagNameStart", "TagNamePart", "Digit", 
+		"WS", "COMMENT", "LINE_COMMENT"
+	};
 
-	private static String[] makeLiteralNames() {
-		return new String[] {
-			null, null, null, null, null, null, "'@'", "'#'", "'('", "')'", "'{'", 
-			"'}'", "'['", "']'", "';'", "','", "'.'", "'='", "'>'", "'<'", "'!'", 
-			"'~'", "'?'", "':'", "'=='", "'<='", "'>='", "'!='", "'&&'", "'||'", 
-			"'++'", "'--'", "'+'", "'-'", "'*'", "'/'", "'&'", "'|'", "'^'", "'%'", 
-			"'->'", "'::'"
-		};
-	}
-	private static final String[] _LITERAL_NAMES = makeLiteralNames();
-	private static String[] makeSymbolicNames() {
-		return new String[] {
-			null, "TagNameDeclaration", "TagAttribute", "ElementBodyPropertDeclaration", 
-			"TagNameSpecialDeclaration", "StringLiteral", "AT", "POUND", "LPAREN", 
-			"RPAREN", "LBRACE", "RBRACE", "LBRACK", "RBRACK", "SEMI", "COMMA", "DOT", 
-			"ASSIGN", "GT", "LT", "BANG", "TILDE", "QUESTION", "COLON", "EQUAL", 
-			"LE", "GE", "NOTEQUAL", "AND", "OR", "INC", "DEC", "ADD", "SUB", "MUL", 
-			"DIV", "BITAND", "BITOR", "CARET", "MOD", "ARROW", "COLONCOLON", "WS", 
-			"COMMENT", "LINE_COMMENT"
-		};
-	}
-	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
+	private static final String[] _LITERAL_NAMES = {
+		null, null, null, null, null, null, "'@'", "'#'", "'('", "')'", "'{'", 
+		"'}'", "'['", "']'", "';'", "','", "'.'", "'='", "'>'", "'<'", "'!'", 
+		"'~'", "'?'", "':'", "'=='", "'<='", "'>='", "'!='", "'&&'", "'||'", "'++'", 
+		"'--'", "'+'", "'-'", "'*'", "'/'", "'&'", "'|'", "'^'", "'%'", "'->'", 
+		"'::'"
+	};
+	private static final String[] _SYMBOLIC_NAMES = {
+		null, "TagNameDeclaration", "TagAttribute", "ElementBodyPropertDeclaration", 
+		"TagNameSpecialDeclaration", "StringLiteral", "AT", "POUND", "LPAREN", 
+		"RPAREN", "LBRACE", "RBRACE", "LBRACK", "RBRACK", "SEMI", "COMMA", "DOT", 
+		"ASSIGN", "GT", "LT", "BANG", "TILDE", "QUESTION", "COLON", "EQUAL", "LE", 
+		"GE", "NOTEQUAL", "AND", "OR", "INC", "DEC", "ADD", "SUB", "MUL", "DIV", 
+		"BITAND", "BITOR", "CARET", "MOD", "ARROW", "COLONCOLON", "WS", "COMMENT", 
+		"LINE_COMMENT"
+	};
 	public static final Vocabulary VOCABULARY = new VocabularyImpl(_LITERAL_NAMES, _SYMBOLIC_NAMES);
 
 	/**
@@ -167,20 +158,20 @@ public class EvaLexer extends Lexer {
 		"\2\2O\u00c6\3\2\2\2Q\u00c8\3\2\2\2S\u00cb\3\2\2\2U\u00d0\3\2\2\2W\u00d2"+
 		"\3\2\2\2Y\u00d5\3\2\2\2[\u00dd\3\2\2\2]\u00e3\3\2\2\2_\u00e5\3\2\2\2a"+
 		"\u00e8\3\2\2\2c\u00ee\3\2\2\2e\u00fc\3\2\2\2gh\5Y-\2h\4\3\2\2\2ij\5\r"+
-		"\7\2jk\5Y-\2k\6\3\2\2\2lm\5!\21\2mn\5Y-\2n\b\3\2\2\2op\7b\2\2pq\5Y-\2"+
-		"qr\7b\2\2r\n\3\2\2\2sw\7$\2\2tv\5U+\2ut\3\2\2\2vy\3\2\2\2wu\3\2\2\2wx"+
-		"\3\2\2\2xz\3\2\2\2yw\3\2\2\2z{\7$\2\2{\f\3\2\2\2|}\7B\2\2}\16\3\2\2\2"+
-		"~\177\7%\2\2\177\20\3\2\2\2\u0080\u0081\7*\2\2\u0081\22\3\2\2\2\u0082"+
-		"\u0083\7+\2\2\u0083\24\3\2\2\2\u0084\u0085\7}\2\2\u0085\26\3\2\2\2\u0086"+
-		"\u0087\7\177\2\2\u0087\30\3\2\2\2\u0088\u0089\7]\2\2\u0089\32\3\2\2\2"+
-		"\u008a\u008b\7_\2\2\u008b\34\3\2\2\2\u008c\u008d\7=\2\2\u008d\36\3\2\2"+
-		"\2\u008e\u008f\7.\2\2\u008f \3\2\2\2\u0090\u0091\7\60\2\2\u0091\"\3\2"+
-		"\2\2\u0092\u0093\7?\2\2\u0093$\3\2\2\2\u0094\u0095\7@\2\2\u0095&\3\2\2"+
-		"\2\u0096\u0097\7>\2\2\u0097(\3\2\2\2\u0098\u0099\7#\2\2\u0099*\3\2\2\2"+
-		"\u009a\u009b\7\u0080\2\2\u009b,\3\2\2\2\u009c\u009d\7A\2\2\u009d.\3\2"+
-		"\2\2\u009e\u009f\7<\2\2\u009f\60\3\2\2\2\u00a0\u00a1\7?\2\2\u00a1\u00a2"+
-		"\7?\2\2\u00a2\62\3\2\2\2\u00a3\u00a4\7>\2\2\u00a4\u00a5\7?\2\2\u00a5\64"+
-		"\3\2\2\2\u00a6\u00a7\7@\2\2\u00a7\u00a8\7?\2\2\u00a8\66\3\2\2\2\u00a9"+
+		"\7\2jk\5\3\2\2k\6\3\2\2\2lm\5!\21\2mn\5\3\2\2n\b\3\2\2\2op\7b\2\2pq\5"+
+		"\3\2\2qr\7b\2\2r\n\3\2\2\2sw\7$\2\2tv\5U+\2ut\3\2\2\2vy\3\2\2\2wu\3\2"+
+		"\2\2wx\3\2\2\2xz\3\2\2\2yw\3\2\2\2z{\7$\2\2{\f\3\2\2\2|}\7B\2\2}\16\3"+
+		"\2\2\2~\177\7%\2\2\177\20\3\2\2\2\u0080\u0081\7*\2\2\u0081\22\3\2\2\2"+
+		"\u0082\u0083\7+\2\2\u0083\24\3\2\2\2\u0084\u0085\7}\2\2\u0085\26\3\2\2"+
+		"\2\u0086\u0087\7\177\2\2\u0087\30\3\2\2\2\u0088\u0089\7]\2\2\u0089\32"+
+		"\3\2\2\2\u008a\u008b\7_\2\2\u008b\34\3\2\2\2\u008c\u008d\7=\2\2\u008d"+
+		"\36\3\2\2\2\u008e\u008f\7.\2\2\u008f \3\2\2\2\u0090\u0091\7\60\2\2\u0091"+
+		"\"\3\2\2\2\u0092\u0093\7?\2\2\u0093$\3\2\2\2\u0094\u0095\7@\2\2\u0095"+
+		"&\3\2\2\2\u0096\u0097\7>\2\2\u0097(\3\2\2\2\u0098\u0099\7#\2\2\u0099*"+
+		"\3\2\2\2\u009a\u009b\7\u0080\2\2\u009b,\3\2\2\2\u009c\u009d\7A\2\2\u009d"+
+		".\3\2\2\2\u009e\u009f\7<\2\2\u009f\60\3\2\2\2\u00a0\u00a1\7?\2\2\u00a1"+
+		"\u00a2\7?\2\2\u00a2\62\3\2\2\2\u00a3\u00a4\7>\2\2\u00a4\u00a5\7?\2\2\u00a5"+
+		"\64\3\2\2\2\u00a6\u00a7\7@\2\2\u00a7\u00a8\7?\2\2\u00a8\66\3\2\2\2\u00a9"+
 		"\u00aa\7#\2\2\u00aa\u00ab\7?\2\2\u00ab8\3\2\2\2\u00ac\u00ad\7(\2\2\u00ad"+
 		"\u00ae\7(\2\2\u00ae:\3\2\2\2\u00af\u00b0\7~\2\2\u00b0\u00b1\7~\2\2\u00b1"+
 		"<\3\2\2\2\u00b2\u00b3\7-\2\2\u00b3\u00b4\7-\2\2\u00b4>\3\2\2\2\u00b5\u00b6"+

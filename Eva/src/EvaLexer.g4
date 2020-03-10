@@ -5,29 +5,31 @@ Lexer rules
 */
 
 // Tagname and parameter declarations
-TagAttribute
-    : AT TagNameDeclaration
+TagNameDeclaration
+    : ValidTagName
     ;
 
 
-TagNameDeclaration
-    : TagNameStart TagNamePart*
+TagAttribute
+    : AT ValidTagName
     ;
 
 
 ElementBodyPropertDeclaration
-    : ':' TagNameStart TagNamePart*
+    : DOT ValidTagName
     ;
 
 
 TagNameSpecialDeclaration
-    : '`' TagNameDeclaration '`'
+    : '`' ValidTagName '`'
     ;
+
 
 // String declarations
 StringLiteral
-	:	'"' StringCharacters? '"'
+	:	'"' StringCharacter* '"'
     ;
+
 
 
 // Symbols
@@ -69,13 +71,8 @@ ARROW : '->';
 COLONCOLON : '::';
 
 
+
 // Fragments
-fragment
-StringCharacters
-	:	StringCharacter+
-	;
-
-
 fragment
 StringCharacter
 	:	~["\\\r\n]
@@ -89,9 +86,15 @@ EscapeSequence
 	;
 
 
+fragment 
+ValidTagName
+    : TagNameStart TagNamePart*
+    ;
+
+
 fragment
 TagNameStart
-    : [a-zA-Z]
+    : [:a-zA-Z]
     | '\u2070'..'\u218F'
     | '\u2C00'..'\u2FEF'
     | '\u3001'..'\uD7FF'
@@ -120,7 +123,7 @@ Digit
 
 
 // Whitespace and comments
-WS  :  [ \t\r\n]+ -> skip
+WS  :  [ \t\r\n\u000C]+ -> skip
     ;
 
 
