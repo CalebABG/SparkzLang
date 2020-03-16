@@ -147,25 +147,13 @@ public class SparkzParserBaseListener implements SparkzParserListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterElementBodyText(SparkzParser.ElementBodyTextContext ctx) { }
+	@Override public void enterElementBodyPropertyDeclaration(SparkzParser.ElementBodyPropertyDeclarationContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitElementBodyText(SparkzParser.ElementBodyTextContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterElementBodyProperty(SparkzParser.ElementBodyPropertyContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitElementBodyProperty(SparkzParser.ElementBodyPropertyContext ctx) { }
+	@Override public void exitElementBodyPropertyDeclaration(SparkzParser.ElementBodyPropertyDeclarationContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

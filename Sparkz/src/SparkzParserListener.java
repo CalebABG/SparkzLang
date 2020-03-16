@@ -123,25 +123,15 @@ public interface SparkzParserListener extends ParseTreeListener {
 	 */
 	void exitElementBodyContent(SparkzParser.ElementBodyContentContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link SparkzParser#elementBodyText}.
+	 * Enter a parse tree produced by {@link SparkzParser#elementBodyPropertyDeclaration}.
 	 * @param ctx the parse tree
 	 */
-	void enterElementBodyText(SparkzParser.ElementBodyTextContext ctx);
+	void enterElementBodyPropertyDeclaration(SparkzParser.ElementBodyPropertyDeclarationContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link SparkzParser#elementBodyText}.
+	 * Exit a parse tree produced by {@link SparkzParser#elementBodyPropertyDeclaration}.
 	 * @param ctx the parse tree
 	 */
-	void exitElementBodyText(SparkzParser.ElementBodyTextContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link SparkzParser#elementBodyProperty}.
-	 * @param ctx the parse tree
-	 */
-	void enterElementBodyProperty(SparkzParser.ElementBodyPropertyContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link SparkzParser#elementBodyProperty}.
-	 * @param ctx the parse tree
-	 */
-	void exitElementBodyProperty(SparkzParser.ElementBodyPropertyContext ctx);
+	void exitElementBodyPropertyDeclaration(SparkzParser.ElementBodyPropertyDeclarationContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link SparkzParser#elementAttributeListDeclaration}.
 	 * @param ctx the parse tree

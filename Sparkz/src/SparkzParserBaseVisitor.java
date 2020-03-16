@@ -93,14 +93,7 @@ public class SparkzParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> impl
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitElementBodyText(SparkzParser.ElementBodyTextContext ctx) { return visitChildren(ctx); }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation returns the result of calling
-	 * {@link #visitChildren} on {@code ctx}.</p>
-	 */
-	@Override public T visitElementBodyProperty(SparkzParser.ElementBodyPropertyContext ctx) { return visitChildren(ctx); }
+	@Override public T visitElementBodyPropertyDeclaration(SparkzParser.ElementBodyPropertyDeclarationContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *

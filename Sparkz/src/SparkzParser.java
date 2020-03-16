@@ -16,26 +16,25 @@ public class SparkzParser extends Parser {
 	protected static final PredictionContextCache _sharedContextCache =
 		new PredictionContextCache();
 	public static final int
-		TagNameDeclaration=1, TagAttribute=2, ElementBodyPropertDeclaration=3, 
-		TagNameSpecialDeclaration=4, StringLiteral=5, AT=6, POUND=7, LPAREN=8, 
-		RPAREN=9, LBRACE=10, RBRACE=11, LBRACK=12, RBRACK=13, SEMI=14, COMMA=15, 
-		DOT=16, ASSIGN=17, GT=18, LT=19, BANG=20, TILDE=21, QUESTION=22, COLON=23, 
-		EQUAL=24, LE=25, GE=26, NOTEQUAL=27, AND=28, OR=29, INC=30, DEC=31, ADD=32, 
-		SUB=33, MUL=34, DIV=35, BITAND=36, BITOR=37, CARET=38, MOD=39, ARROW=40, 
-		COLONCOLON=41, WS=42, COMMENT=43, LINE_COMMENT=44;
+		TagNameDeclaration=1, TagNameSpecialDeclaration=2, StringLiteral=3, AT=4, 
+		POUND=5, LPAREN=6, RPAREN=7, LBRACE=8, RBRACE=9, LBRACK=10, RBRACK=11, 
+		SEMI=12, COMMA=13, DOT=14, ASSIGN=15, GT=16, LT=17, BANG=18, TILDE=19, 
+		QUESTION=20, COLON=21, EQUAL=22, LE=23, GE=24, NOTEQUAL=25, AND=26, OR=27, 
+		INC=28, DEC=29, ADD=30, SUB=31, MUL=32, DIV=33, BITAND=34, BITOR=35, CARET=36, 
+		MOD=37, ARROW=38, COLONCOLON=39, WS=40, COMMENT=41, LINE_COMMENT=42;
 	public static final int
 		RULE_sparkz = 0, RULE_elementDeclaration = 1, RULE_elementCompactDeclaration = 2, 
 		RULE_elementCompactContentDeclaration = 3, RULE_elementCompactStringDeclaration = 4, 
 		RULE_elementCompactContent = 5, RULE_elementNormalDeclaration = 6, RULE_elementBody = 7, 
-		RULE_elementBodyContent = 8, RULE_elementBodyText = 9, RULE_elementBodyProperty = 10, 
-		RULE_elementAttributeListDeclaration = 11, RULE_elementAttributes = 12, 
-		RULE_elementAttribute = 13, RULE_elementAttributeName = 14, RULE_elementAttributeValue = 15, 
-		RULE_elementName = 16, RULE_string = 17;
+		RULE_elementBodyContent = 8, RULE_elementBodyPropertyDeclaration = 9, 
+		RULE_elementAttributeListDeclaration = 10, RULE_elementAttributes = 11, 
+		RULE_elementAttribute = 12, RULE_elementAttributeName = 13, RULE_elementAttributeValue = 14, 
+		RULE_elementName = 15, RULE_string = 16;
 	private static String[] makeRuleNames() {
 		return new String[] {
 			"sparkz", "elementDeclaration", "elementCompactDeclaration", "elementCompactContentDeclaration", 
 			"elementCompactStringDeclaration", "elementCompactContent", "elementNormalDeclaration", 
-			"elementBody", "elementBodyContent", "elementBodyText", "elementBodyProperty", 
+			"elementBody", "elementBodyContent", "elementBodyPropertyDeclaration", 
 			"elementAttributeListDeclaration", "elementAttributes", "elementAttribute", 
 			"elementAttributeName", "elementAttributeValue", "elementName", "string"
 		};
@@ -44,23 +43,21 @@ public class SparkzParser extends Parser {
 
 	private static String[] makeLiteralNames() {
 		return new String[] {
-			null, null, null, null, null, null, "'@'", "'#'", "'('", "')'", "'{'", 
-			"'}'", "'['", "']'", "';'", "','", "'.'", "'='", "'>'", "'<'", "'!'", 
-			"'~'", "'?'", "':'", "'=='", "'<='", "'>='", "'!='", "'&&'", "'||'", 
-			"'++'", "'--'", "'+'", "'-'", "'*'", "'/'", "'&'", "'|'", "'^'", "'%'", 
-			"'->'", "'::'"
+			null, null, null, null, "'@'", "'#'", "'('", "')'", "'{'", "'}'", "'['", 
+			"']'", "';'", "','", "'.'", "'='", "'>'", "'<'", "'!'", "'~'", "'?'", 
+			"':'", "'=='", "'<='", "'>='", "'!='", "'&&'", "'||'", "'++'", "'--'", 
+			"'+'", "'-'", "'*'", "'/'", "'&'", "'|'", "'^'", "'%'", "'->'", "'::'"
 		};
 	}
 	private static final String[] _LITERAL_NAMES = makeLiteralNames();
 	private static String[] makeSymbolicNames() {
 		return new String[] {
-			null, "TagNameDeclaration", "TagAttribute", "ElementBodyPropertDeclaration", 
-			"TagNameSpecialDeclaration", "StringLiteral", "AT", "POUND", "LPAREN", 
-			"RPAREN", "LBRACE", "RBRACE", "LBRACK", "RBRACK", "SEMI", "COMMA", "DOT", 
-			"ASSIGN", "GT", "LT", "BANG", "TILDE", "QUESTION", "COLON", "EQUAL", 
-			"LE", "GE", "NOTEQUAL", "AND", "OR", "INC", "DEC", "ADD", "SUB", "MUL", 
-			"DIV", "BITAND", "BITOR", "CARET", "MOD", "ARROW", "COLONCOLON", "WS", 
-			"COMMENT", "LINE_COMMENT"
+			null, "TagNameDeclaration", "TagNameSpecialDeclaration", "StringLiteral", 
+			"AT", "POUND", "LPAREN", "RPAREN", "LBRACE", "RBRACE", "LBRACK", "RBRACK", 
+			"SEMI", "COMMA", "DOT", "ASSIGN", "GT", "LT", "BANG", "TILDE", "QUESTION", 
+			"COLON", "EQUAL", "LE", "GE", "NOTEQUAL", "AND", "OR", "INC", "DEC", 
+			"ADD", "SUB", "MUL", "DIV", "BITAND", "BITOR", "CARET", "MOD", "ARROW", 
+			"COLONCOLON", "WS", "COMMENT", "LINE_COMMENT"
 		};
 	}
 	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
@@ -148,21 +145,21 @@ public class SparkzParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(39);
+			setState(37);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while (_la==TagNameDeclaration || _la==TagNameSpecialDeclaration) {
 				{
 				{
-				setState(36);
+				setState(34);
 				elementDeclaration();
 				}
 				}
-				setState(41);
+				setState(39);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
-			setState(42);
+			setState(40);
 			match(EOF);
 			}
 		}
@@ -250,14 +247,14 @@ public class SparkzParser extends Parser {
 		ElementDeclarationContext _localctx = new ElementDeclarationContext(_ctx, getState());
 		enterRule(_localctx, 2, RULE_elementDeclaration);
 		try {
-			setState(47);
+			setState(45);
 			_errHandler.sync(this);
 			switch ( getInterpreter().adaptivePredict(_input,1,_ctx) ) {
 			case 1:
 				_localctx = new NormalElementContext(_localctx);
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(44);
+				setState(42);
 				elementNormalDeclaration();
 				}
 				break;
@@ -265,7 +262,7 @@ public class SparkzParser extends Parser {
 				_localctx = new CompactElementContext(_localctx);
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(45);
+				setState(43);
 				elementCompactDeclaration();
 				}
 				break;
@@ -273,7 +270,7 @@ public class SparkzParser extends Parser {
 				_localctx = new CompactExtElementContext(_localctx);
 				enterOuterAlt(_localctx, 3);
 				{
-				setState(46);
+				setState(44);
 				elementCompactContentDeclaration();
 				}
 				break;
@@ -327,29 +324,29 @@ public class SparkzParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(49);
+			setState(47);
 			elementName();
-			setState(51);
+			setState(49);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if (_la==LPAREN) {
 				{
-				setState(50);
+				setState(48);
 				elementAttributeListDeclaration();
 				}
 			}
 
-			setState(54);
+			setState(52);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if (_la==COLON) {
 				{
-				setState(53);
+				setState(51);
 				elementCompactStringDeclaration();
 				}
 			}
 
-			setState(56);
+			setState(54);
 			match(SEMI);
 			}
 		}
@@ -404,31 +401,31 @@ public class SparkzParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(58);
+			setState(56);
 			elementName();
-			setState(60);
+			setState(58);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if (_la==LPAREN) {
 				{
-				setState(59);
+				setState(57);
 				elementAttributeListDeclaration();
 				}
 			}
 
-			setState(63);
+			setState(61);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if (_la==COLON) {
 				{
-				setState(62);
+				setState(60);
 				elementCompactStringDeclaration();
 				}
 			}
 
-			setState(65);
+			setState(63);
 			match(GT);
-			setState(66);
+			setState(64);
 			elementCompactContent();
 			}
 		}
@@ -473,9 +470,9 @@ public class SparkzParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(68);
+			setState(66);
 			match(COLON);
-			setState(69);
+			setState(67);
 			string();
 			}
 		}
@@ -519,7 +516,7 @@ public class SparkzParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(71);
+			setState(69);
 			elementDeclaration();
 			}
 		}
@@ -570,19 +567,19 @@ public class SparkzParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(73);
+			setState(71);
 			elementName();
-			setState(75);
+			setState(73);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if (_la==LPAREN) {
 				{
-				setState(74);
+				setState(72);
 				elementAttributeListDeclaration();
 				}
 			}
 
-			setState(77);
+			setState(75);
 			elementBody();
 			}
 		}
@@ -628,11 +625,11 @@ public class SparkzParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(79);
+			setState(77);
 			match(LBRACE);
-			setState(80);
+			setState(78);
 			elementBodyContent();
-			setState(81);
+			setState(79);
 			match(RBRACE);
 			}
 		}
@@ -654,8 +651,11 @@ public class SparkzParser extends Parser {
 		public ElementDeclarationContext elementDeclaration(int i) {
 			return getRuleContext(ElementDeclarationContext.class,i);
 		}
-		public ElementBodyTextContext elementBodyText() {
-			return getRuleContext(ElementBodyTextContext.class,0);
+		public List<ElementBodyPropertyDeclarationContext> elementBodyPropertyDeclaration() {
+			return getRuleContexts(ElementBodyPropertyDeclarationContext.class);
+		}
+		public ElementBodyPropertyDeclarationContext elementBodyPropertyDeclaration(int i) {
+			return getRuleContext(ElementBodyPropertyDeclarationContext.class,i);
 		}
 		public ElementBodyContentContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -681,62 +681,37 @@ public class SparkzParser extends Parser {
 		enterRule(_localctx, 16, RULE_elementBodyContent);
 		int _la;
 		try {
-			int _alt;
-			setState(99);
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(85);
 			_errHandler.sync(this);
-			switch ( getInterpreter().adaptivePredict(_input,10,_ctx) ) {
-			case 1:
-				enterOuterAlt(_localctx, 1);
+			_la = _input.LA(1);
+			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << TagNameDeclaration) | (1L << TagNameSpecialDeclaration) | (1L << DOT))) != 0)) {
 				{
-				setState(86);
+				setState(83);
 				_errHandler.sync(this);
-				_alt = getInterpreter().adaptivePredict(_input,7,_ctx);
-				while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
-					if ( _alt==1 ) {
-						{
-						{
-						setState(83);
-						elementDeclaration();
-						}
-						} 
-					}
-					setState(88);
-					_errHandler.sync(this);
-					_alt = getInterpreter().adaptivePredict(_input,7,_ctx);
-				}
-				setState(90);
-				_errHandler.sync(this);
-				_la = _input.LA(1);
-				if (_la==ElementBodyPropertDeclaration) {
+				switch (_input.LA(1)) {
+				case TagNameDeclaration:
+				case TagNameSpecialDeclaration:
 					{
-					setState(89);
-					elementBodyText();
-					}
-				}
-
-				setState(95);
-				_errHandler.sync(this);
-				_la = _input.LA(1);
-				while (_la==TagNameDeclaration || _la==TagNameSpecialDeclaration) {
-					{
-					{
-					setState(92);
+					setState(81);
 					elementDeclaration();
 					}
+					break;
+				case DOT:
+					{
+					setState(82);
+					elementBodyPropertyDeclaration();
 					}
-					setState(97);
-					_errHandler.sync(this);
-					_la = _input.LA(1);
+					break;
+				default:
+					throw new NoViableAltException(this);
 				}
 				}
-				break;
-			case 2:
-				enterOuterAlt(_localctx, 2);
-				{
-				setState(98);
-				elementBodyText();
-				}
-				break;
+				setState(87);
+				_errHandler.sync(this);
+				_la = _input.LA(1);
+			}
 			}
 		}
 		catch (RecognitionException re) {
@@ -750,87 +725,48 @@ public class SparkzParser extends Parser {
 		return _localctx;
 	}
 
-	public static class ElementBodyTextContext extends ParserRuleContext {
-		public ElementBodyPropertyContext elementBodyProperty() {
-			return getRuleContext(ElementBodyPropertyContext.class,0);
+	public static class ElementBodyPropertyDeclarationContext extends ParserRuleContext {
+		public TerminalNode DOT() { return getToken(SparkzParser.DOT, 0); }
+		public ElementNameContext elementName() {
+			return getRuleContext(ElementNameContext.class,0);
 		}
 		public TerminalNode ASSIGN() { return getToken(SparkzParser.ASSIGN, 0); }
 		public StringContext string() {
 			return getRuleContext(StringContext.class,0);
 		}
-		public ElementBodyTextContext(ParserRuleContext parent, int invokingState) {
+		public ElementBodyPropertyDeclarationContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
-		@Override public int getRuleIndex() { return RULE_elementBodyText; }
+		@Override public int getRuleIndex() { return RULE_elementBodyPropertyDeclaration; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SparkzParserListener ) ((SparkzParserListener)listener).enterElementBodyText(this);
+			if ( listener instanceof SparkzParserListener ) ((SparkzParserListener)listener).enterElementBodyPropertyDeclaration(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SparkzParserListener ) ((SparkzParserListener)listener).exitElementBodyText(this);
+			if ( listener instanceof SparkzParserListener ) ((SparkzParserListener)listener).exitElementBodyPropertyDeclaration(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof SparkzParserVisitor ) return ((SparkzParserVisitor<? extends T>)visitor).visitElementBodyText(this);
+			if ( visitor instanceof SparkzParserVisitor ) return ((SparkzParserVisitor<? extends T>)visitor).visitElementBodyPropertyDeclaration(this);
 			else return visitor.visitChildren(this);
 		}
 	}
 
-	public final ElementBodyTextContext elementBodyText() throws RecognitionException {
-		ElementBodyTextContext _localctx = new ElementBodyTextContext(_ctx, getState());
-		enterRule(_localctx, 18, RULE_elementBodyText);
+	public final ElementBodyPropertyDeclarationContext elementBodyPropertyDeclaration() throws RecognitionException {
+		ElementBodyPropertyDeclarationContext _localctx = new ElementBodyPropertyDeclarationContext(_ctx, getState());
+		enterRule(_localctx, 18, RULE_elementBodyPropertyDeclaration);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(101);
-			elementBodyProperty();
-			setState(102);
+			setState(88);
+			match(DOT);
+			setState(89);
+			elementName();
+			setState(90);
 			match(ASSIGN);
-			setState(103);
+			setState(91);
 			string();
-			}
-		}
-		catch (RecognitionException re) {
-			_localctx.exception = re;
-			_errHandler.reportError(this, re);
-			_errHandler.recover(this, re);
-		}
-		finally {
-			exitRule();
-		}
-		return _localctx;
-	}
-
-	public static class ElementBodyPropertyContext extends ParserRuleContext {
-		public TerminalNode ElementBodyPropertDeclaration() { return getToken(SparkzParser.ElementBodyPropertDeclaration, 0); }
-		public ElementBodyPropertyContext(ParserRuleContext parent, int invokingState) {
-			super(parent, invokingState);
-		}
-		@Override public int getRuleIndex() { return RULE_elementBodyProperty; }
-		@Override
-		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SparkzParserListener ) ((SparkzParserListener)listener).enterElementBodyProperty(this);
-		}
-		@Override
-		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SparkzParserListener ) ((SparkzParserListener)listener).exitElementBodyProperty(this);
-		}
-		@Override
-		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof SparkzParserVisitor ) return ((SparkzParserVisitor<? extends T>)visitor).visitElementBodyProperty(this);
-			else return visitor.visitChildren(this);
-		}
-	}
-
-	public final ElementBodyPropertyContext elementBodyProperty() throws RecognitionException {
-		ElementBodyPropertyContext _localctx = new ElementBodyPropertyContext(_ctx, getState());
-		enterRule(_localctx, 20, RULE_elementBodyProperty);
-		try {
-			enterOuterAlt(_localctx, 1);
-			{
-			setState(105);
-			match(ElementBodyPropertDeclaration);
 			}
 		}
 		catch (RecognitionException re) {
@@ -871,15 +807,15 @@ public class SparkzParser extends Parser {
 
 	public final ElementAttributeListDeclarationContext elementAttributeListDeclaration() throws RecognitionException {
 		ElementAttributeListDeclarationContext _localctx = new ElementAttributeListDeclarationContext(_ctx, getState());
-		enterRule(_localctx, 22, RULE_elementAttributeListDeclaration);
+		enterRule(_localctx, 20, RULE_elementAttributeListDeclaration);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(107);
+			setState(93);
 			match(LPAREN);
-			setState(108);
+			setState(94);
 			elementAttributes();
-			setState(109);
+			setState(95);
 			match(RPAREN);
 			}
 		}
@@ -926,26 +862,26 @@ public class SparkzParser extends Parser {
 
 	public final ElementAttributesContext elementAttributes() throws RecognitionException {
 		ElementAttributesContext _localctx = new ElementAttributesContext(_ctx, getState());
-		enterRule(_localctx, 24, RULE_elementAttributes);
+		enterRule(_localctx, 22, RULE_elementAttributes);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(111);
+			setState(97);
 			elementAttribute();
-			setState(116);
+			setState(102);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while (_la==COMMA) {
 				{
 				{
-				setState(112);
+				setState(98);
 				match(COMMA);
-				setState(113);
+				setState(99);
 				elementAttribute();
 				}
 				}
-				setState(118);
+				setState(104);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
@@ -991,21 +927,21 @@ public class SparkzParser extends Parser {
 
 	public final ElementAttributeContext elementAttribute() throws RecognitionException {
 		ElementAttributeContext _localctx = new ElementAttributeContext(_ctx, getState());
-		enterRule(_localctx, 26, RULE_elementAttribute);
+		enterRule(_localctx, 24, RULE_elementAttribute);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(119);
+			setState(105);
 			elementAttributeName();
-			setState(122);
+			setState(108);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if (_la==ASSIGN) {
 				{
-				setState(120);
+				setState(106);
 				match(ASSIGN);
-				setState(121);
+				setState(107);
 				elementAttributeValue();
 				}
 			}
@@ -1024,7 +960,10 @@ public class SparkzParser extends Parser {
 	}
 
 	public static class ElementAttributeNameContext extends ParserRuleContext {
-		public TerminalNode TagAttribute() { return getToken(SparkzParser.TagAttribute, 0); }
+		public TerminalNode AT() { return getToken(SparkzParser.AT, 0); }
+		public ElementNameContext elementName() {
+			return getRuleContext(ElementNameContext.class,0);
+		}
 		public ElementAttributeNameContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -1046,12 +985,14 @@ public class SparkzParser extends Parser {
 
 	public final ElementAttributeNameContext elementAttributeName() throws RecognitionException {
 		ElementAttributeNameContext _localctx = new ElementAttributeNameContext(_ctx, getState());
-		enterRule(_localctx, 28, RULE_elementAttributeName);
+		enterRule(_localctx, 26, RULE_elementAttributeName);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(124);
-			match(TagAttribute);
+			setState(110);
+			match(AT);
+			setState(111);
+			elementName();
 			}
 		}
 		catch (RecognitionException re) {
@@ -1066,7 +1007,9 @@ public class SparkzParser extends Parser {
 	}
 
 	public static class ElementAttributeValueContext extends ParserRuleContext {
-		public TerminalNode StringLiteral() { return getToken(SparkzParser.StringLiteral, 0); }
+		public StringContext string() {
+			return getRuleContext(StringContext.class,0);
+		}
 		public ElementAttributeValueContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -1088,12 +1031,12 @@ public class SparkzParser extends Parser {
 
 	public final ElementAttributeValueContext elementAttributeValue() throws RecognitionException {
 		ElementAttributeValueContext _localctx = new ElementAttributeValueContext(_ctx, getState());
-		enterRule(_localctx, 30, RULE_elementAttributeValue);
+		enterRule(_localctx, 28, RULE_elementAttributeValue);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(126);
-			match(StringLiteral);
+			setState(113);
+			string();
 			}
 		}
 		catch (RecognitionException re) {
@@ -1131,12 +1074,12 @@ public class SparkzParser extends Parser {
 
 	public final ElementNameContext elementName() throws RecognitionException {
 		ElementNameContext _localctx = new ElementNameContext(_ctx, getState());
-		enterRule(_localctx, 32, RULE_elementName);
+		enterRule(_localctx, 30, RULE_elementName);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(128);
+			setState(115);
 			_la = _input.LA(1);
 			if ( !(_la==TagNameDeclaration || _la==TagNameSpecialDeclaration) ) {
 			_errHandler.recoverInline(this);
@@ -1182,11 +1125,11 @@ public class SparkzParser extends Parser {
 
 	public final StringContext string() throws RecognitionException {
 		StringContext _localctx = new StringContext(_ctx, getState());
-		enterRule(_localctx, 34, RULE_string);
+		enterRule(_localctx, 32, RULE_string);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(130);
+			setState(117);
 			match(StringLiteral);
 			}
 		}
@@ -1202,39 +1145,34 @@ public class SparkzParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3.\u0087\4\2\t\2\4"+
-		"\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\4\t\t\t\4\n\t\n\4\13\t"+
-		"\13\4\f\t\f\4\r\t\r\4\16\t\16\4\17\t\17\4\20\t\20\4\21\t\21\4\22\t\22"+
-		"\4\23\t\23\3\2\7\2(\n\2\f\2\16\2+\13\2\3\2\3\2\3\3\3\3\3\3\5\3\62\n\3"+
-		"\3\4\3\4\5\4\66\n\4\3\4\5\49\n\4\3\4\3\4\3\5\3\5\5\5?\n\5\3\5\5\5B\n\5"+
-		"\3\5\3\5\3\5\3\6\3\6\3\6\3\7\3\7\3\b\3\b\5\bN\n\b\3\b\3\b\3\t\3\t\3\t"+
-		"\3\t\3\n\7\nW\n\n\f\n\16\nZ\13\n\3\n\5\n]\n\n\3\n\7\n`\n\n\f\n\16\nc\13"+
-		"\n\3\n\5\nf\n\n\3\13\3\13\3\13\3\13\3\f\3\f\3\r\3\r\3\r\3\r\3\16\3\16"+
-		"\3\16\7\16u\n\16\f\16\16\16x\13\16\3\17\3\17\3\17\5\17}\n\17\3\20\3\20"+
-		"\3\21\3\21\3\22\3\22\3\23\3\23\3\23\2\2\24\2\4\6\b\n\f\16\20\22\24\26"+
-		"\30\32\34\36 \"$\2\3\4\2\3\3\6\6\2\u0082\2)\3\2\2\2\4\61\3\2\2\2\6\63"+
-		"\3\2\2\2\b<\3\2\2\2\nF\3\2\2\2\fI\3\2\2\2\16K\3\2\2\2\20Q\3\2\2\2\22e"+
-		"\3\2\2\2\24g\3\2\2\2\26k\3\2\2\2\30m\3\2\2\2\32q\3\2\2\2\34y\3\2\2\2\36"+
-		"~\3\2\2\2 \u0080\3\2\2\2\"\u0082\3\2\2\2$\u0084\3\2\2\2&(\5\4\3\2\'&\3"+
-		"\2\2\2(+\3\2\2\2)\'\3\2\2\2)*\3\2\2\2*,\3\2\2\2+)\3\2\2\2,-\7\2\2\3-\3"+
-		"\3\2\2\2.\62\5\16\b\2/\62\5\6\4\2\60\62\5\b\5\2\61.\3\2\2\2\61/\3\2\2"+
-		"\2\61\60\3\2\2\2\62\5\3\2\2\2\63\65\5\"\22\2\64\66\5\30\r\2\65\64\3\2"+
-		"\2\2\65\66\3\2\2\2\668\3\2\2\2\679\5\n\6\28\67\3\2\2\289\3\2\2\29:\3\2"+
-		"\2\2:;\7\20\2\2;\7\3\2\2\2<>\5\"\22\2=?\5\30\r\2>=\3\2\2\2>?\3\2\2\2?"+
-		"A\3\2\2\2@B\5\n\6\2A@\3\2\2\2AB\3\2\2\2BC\3\2\2\2CD\7\24\2\2DE\5\f\7\2"+
-		"E\t\3\2\2\2FG\7\31\2\2GH\5$\23\2H\13\3\2\2\2IJ\5\4\3\2J\r\3\2\2\2KM\5"+
-		"\"\22\2LN\5\30\r\2ML\3\2\2\2MN\3\2\2\2NO\3\2\2\2OP\5\20\t\2P\17\3\2\2"+
-		"\2QR\7\f\2\2RS\5\22\n\2ST\7\r\2\2T\21\3\2\2\2UW\5\4\3\2VU\3\2\2\2WZ\3"+
-		"\2\2\2XV\3\2\2\2XY\3\2\2\2Y\\\3\2\2\2ZX\3\2\2\2[]\5\24\13\2\\[\3\2\2\2"+
-		"\\]\3\2\2\2]a\3\2\2\2^`\5\4\3\2_^\3\2\2\2`c\3\2\2\2a_\3\2\2\2ab\3\2\2"+
-		"\2bf\3\2\2\2ca\3\2\2\2df\5\24\13\2eX\3\2\2\2ed\3\2\2\2f\23\3\2\2\2gh\5"+
-		"\26\f\2hi\7\23\2\2ij\5$\23\2j\25\3\2\2\2kl\7\5\2\2l\27\3\2\2\2mn\7\n\2"+
-		"\2no\5\32\16\2op\7\13\2\2p\31\3\2\2\2qv\5\34\17\2rs\7\21\2\2su\5\34\17"+
-		"\2tr\3\2\2\2ux\3\2\2\2vt\3\2\2\2vw\3\2\2\2w\33\3\2\2\2xv\3\2\2\2y|\5\36"+
-		"\20\2z{\7\23\2\2{}\5 \21\2|z\3\2\2\2|}\3\2\2\2}\35\3\2\2\2~\177\7\4\2"+
-		"\2\177\37\3\2\2\2\u0080\u0081\7\7\2\2\u0081!\3\2\2\2\u0082\u0083\t\2\2"+
-		"\2\u0083#\3\2\2\2\u0084\u0085\7\7\2\2\u0085%\3\2\2\2\17)\61\658>AMX\\"+
-		"aev|";
+		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3,z\4\2\t\2\4\3\t\3"+
+		"\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\4\t\t\t\4\n\t\n\4\13\t\13\4\f"+
+		"\t\f\4\r\t\r\4\16\t\16\4\17\t\17\4\20\t\20\4\21\t\21\4\22\t\22\3\2\7\2"+
+		"&\n\2\f\2\16\2)\13\2\3\2\3\2\3\3\3\3\3\3\5\3\60\n\3\3\4\3\4\5\4\64\n\4"+
+		"\3\4\5\4\67\n\4\3\4\3\4\3\5\3\5\5\5=\n\5\3\5\5\5@\n\5\3\5\3\5\3\5\3\6"+
+		"\3\6\3\6\3\7\3\7\3\b\3\b\5\bL\n\b\3\b\3\b\3\t\3\t\3\t\3\t\3\n\3\n\7\n"+
+		"V\n\n\f\n\16\nY\13\n\3\13\3\13\3\13\3\13\3\13\3\f\3\f\3\f\3\f\3\r\3\r"+
+		"\3\r\7\rg\n\r\f\r\16\rj\13\r\3\16\3\16\3\16\5\16o\n\16\3\17\3\17\3\17"+
+		"\3\20\3\20\3\21\3\21\3\22\3\22\3\22\2\2\23\2\4\6\b\n\f\16\20\22\24\26"+
+		"\30\32\34\36 \"\2\3\3\2\3\4\2t\2\'\3\2\2\2\4/\3\2\2\2\6\61\3\2\2\2\b:"+
+		"\3\2\2\2\nD\3\2\2\2\fG\3\2\2\2\16I\3\2\2\2\20O\3\2\2\2\22W\3\2\2\2\24"+
+		"Z\3\2\2\2\26_\3\2\2\2\30c\3\2\2\2\32k\3\2\2\2\34p\3\2\2\2\36s\3\2\2\2"+
+		" u\3\2\2\2\"w\3\2\2\2$&\5\4\3\2%$\3\2\2\2&)\3\2\2\2\'%\3\2\2\2\'(\3\2"+
+		"\2\2(*\3\2\2\2)\'\3\2\2\2*+\7\2\2\3+\3\3\2\2\2,\60\5\16\b\2-\60\5\6\4"+
+		"\2.\60\5\b\5\2/,\3\2\2\2/-\3\2\2\2/.\3\2\2\2\60\5\3\2\2\2\61\63\5 \21"+
+		"\2\62\64\5\26\f\2\63\62\3\2\2\2\63\64\3\2\2\2\64\66\3\2\2\2\65\67\5\n"+
+		"\6\2\66\65\3\2\2\2\66\67\3\2\2\2\678\3\2\2\289\7\16\2\29\7\3\2\2\2:<\5"+
+		" \21\2;=\5\26\f\2<;\3\2\2\2<=\3\2\2\2=?\3\2\2\2>@\5\n\6\2?>\3\2\2\2?@"+
+		"\3\2\2\2@A\3\2\2\2AB\7\22\2\2BC\5\f\7\2C\t\3\2\2\2DE\7\27\2\2EF\5\"\22"+
+		"\2F\13\3\2\2\2GH\5\4\3\2H\r\3\2\2\2IK\5 \21\2JL\5\26\f\2KJ\3\2\2\2KL\3"+
+		"\2\2\2LM\3\2\2\2MN\5\20\t\2N\17\3\2\2\2OP\7\n\2\2PQ\5\22\n\2QR\7\13\2"+
+		"\2R\21\3\2\2\2SV\5\4\3\2TV\5\24\13\2US\3\2\2\2UT\3\2\2\2VY\3\2\2\2WU\3"+
+		"\2\2\2WX\3\2\2\2X\23\3\2\2\2YW\3\2\2\2Z[\7\20\2\2[\\\5 \21\2\\]\7\21\2"+
+		"\2]^\5\"\22\2^\25\3\2\2\2_`\7\b\2\2`a\5\30\r\2ab\7\t\2\2b\27\3\2\2\2c"+
+		"h\5\32\16\2de\7\17\2\2eg\5\32\16\2fd\3\2\2\2gj\3\2\2\2hf\3\2\2\2hi\3\2"+
+		"\2\2i\31\3\2\2\2jh\3\2\2\2kn\5\34\17\2lm\7\21\2\2mo\5\36\20\2nl\3\2\2"+
+		"\2no\3\2\2\2o\33\3\2\2\2pq\7\6\2\2qr\5 \21\2r\35\3\2\2\2st\5\"\22\2t\37"+
+		"\3\2\2\2uv\t\2\2\2v!\3\2\2\2wx\7\5\2\2x#\3\2\2\2\r\'/\63\66<?KUWhn";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {

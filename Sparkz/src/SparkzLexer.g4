@@ -10,18 +10,8 @@ TagNameDeclaration
     ;
 
 
-TagAttribute
-    : AT ValidTagName
-    ;
-
-
-ElementBodyPropertDeclaration
-    : DOT ValidTagName
-    ;
-
-
 TagNameSpecialDeclaration
-    : '`' ValidTagName '`'
+    : '`' StringCharacter+ '`'
     ;
 
 

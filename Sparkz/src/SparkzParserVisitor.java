@@ -79,17 +79,11 @@ public interface SparkzParserVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitElementBodyContent(SparkzParser.ElementBodyContentContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link SparkzParser#elementBodyText}.
+	 * Visit a parse tree produced by {@link SparkzParser#elementBodyPropertyDeclaration}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitElementBodyText(SparkzParser.ElementBodyTextContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link SparkzParser#elementBodyProperty}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitElementBodyProperty(SparkzParser.ElementBodyPropertyContext ctx);
+	T visitElementBodyPropertyDeclaration(SparkzParser.ElementBodyPropertyDeclarationContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link SparkzParser#elementAttributeListDeclaration}.
 	 * @param ctx the parse tree

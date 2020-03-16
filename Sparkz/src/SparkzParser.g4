@@ -12,7 +12,7 @@ Parser rules
 
 /* Start grammar rule! */
 sparkz
-    : (elementDeclaration)* EOF
+    : elementDeclaration* EOF
     ;
 
 
@@ -54,18 +54,12 @@ elementBody
 
 
 elementBodyContent
-    : elementDeclaration* elementBodyText? elementDeclaration*
-    | elementBodyText
+    : (elementDeclaration | elementBodyPropertyDeclaration)*
     ;
 
 
-elementBodyText
-    : elementBodyProperty '=' string
-    ;
-
-
-elementBodyProperty
-    : ElementBodyPropertDeclaration
+elementBodyPropertyDeclaration
+    : '.' elementName '=' string
     ;
 
 
@@ -81,17 +75,16 @@ elementAttributes
 
 elementAttribute
     : elementAttributeName ('=' elementAttributeValue)?
-//    : elementAttributeName '=' elementAttributeValue
     ;
 
 
 elementAttributeName
-    : TagAttribute
+    : '@' elementName
     ;
 
 
 elementAttributeValue
-    : StringLiteral
+    : string
     ;
 
 
